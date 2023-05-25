@@ -1,0 +1,15 @@
+.bg {
+    width: 100%;
+}
+
+
+.sheet {
+    z-index: 100;
+    position: fixed;
+    left: 0;
+    height: calc(100vh + 100px);
+    width: 100%;
+    border-radius: 12px 12px 0px;
+    background: #fff;
+    touch-action: none;
+}

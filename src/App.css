@@ -1,0 +1,76 @@
+
+/*
+  Global overrides(for Chrome, etc.)
+ */
+a {
+  text-decoration: underline;
+  color: white;
+}
+
+.App {
+  text-align: center;
+  width: 100%;
+  height: 100%;
+}
+
+.root {
+  width: 100%;
+}
+
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+:root {
+  --app-height: 100%;
+}
+
+html {}
+
+
+
+body {
+  overflow: hidden;
+  height: var(--app-height);
+  width: 100vw;
+  padding: 0;
+  margin: 0;
+  background: #FAA321;
+  position: relative;
+}
+
+
+#root {
+  height: 100%;
+  width: 100%;
+}
+
+.App {
+  height: 100%;
+  width: 100%;
+}
+
+
+/* width */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #424242;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: white;
+}
