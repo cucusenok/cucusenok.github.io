@@ -43,13 +43,14 @@
   },
   {
     name: "Vue",
-    experience: "1 years",
+    experience: "1 year",
     logo: VueLogo,
     description: {
       ru: `Vue & vuex. Последние проекты сделал на Typescript. Сервис для стриминга видео
       и интерфейс управления проектом на Unreal Engine через Pixel Streaming.
       `,
-      en: ''
+      en: `Vue & vuex. The last projects were made in Typescript. Video streaming service
+      and project management interface on Unreal Engine via Pixel Streaming`
     },
     tags: [STACK_TAGS.FrontEnd]
 
@@ -63,24 +64,21 @@
       Конвертировать формат изображений или превратить mp3 в wav или pcm. Даже использовал его на бекенде чтобы подготавливать
       фотографии загруженные пользователем - работало быстрее.
       `,
-      en: ''
+      en: `Desktop utility for all occasions. Split 4k video into small fragments of different size and quality.
+      Convert image format or turn mp3 into wav or pcm. Even used it on the backend to prepare
+      user uploaded photos - worked faster`
     },
     tags: [STACK_TAGS.Utilities]
 
   },
   {
     name: "JetBrains",
-    experience: "1 years",
+    experience: "8 years",
     logo: JetbrainsLogo,
     description: {
-      ru: `В какой-то момент я осознано принял для себя решение что безумно удобно скачать IDE для любого
-      языка программирование и сыкономить кучу времени на разного рода настройки. Безспорный плюс при изучении нового языка программирования.
-      WebStorm, PyCharm, IntelliJ, GoLand - все это уже было интуитивно понятно при решении задач и изучении новых языков.
-      Особенно встроенные возможности вроде http запросов. Целые команды когда узнавали о них сразу же начали использовать что даже
-      частично могло заменить нам Postman.
-      Единственное исключение тут составлял C++ и C# где при необходимости я однозначно выберу Visual Studio.
+      ru: `Однажды я понял, что очень удобно скачать IDE для любого языка программирования и сэкономить время на настройке. Это особенно полезно при изучении нового языка. WebStorm, PyCharm, IntelliJ, GoLand — все эти инструменты стали интуитивно понятными при решении задач и изучении новых языков. Особенно полезны встроенные функции, такие как HTTP-запросы. Когда команды узнавали о них, они сразу начинали использовать, что даже частично заменяло нам Postman. Единственное исключение — C++ и C#, где я всегда выберу Visual Studio, если нужно..
       `,
-      en: ''
+      en: `One day I realized that it is very convenient to download an IDE for any programming language and save time on customization. This is especially useful when learning a new language. WebStorm, PyCharm, IntelliJ, GoLand - all these tools have become intuitive when solving tasks and learning new languages. Built-in features such as HTTP requests were especially useful. When teams learned about them, they immediately started using them, which even partially replaced Postman. The only exception is C++ and C#, where I will always choose Visual Studio if I need to`
     },
     tags: [STACK_TAGS.Utilities]
 
@@ -90,30 +88,22 @@
     experience: "1 years",
     logo: TasksManagementLogo,
     description: {
-      ru: `Jira, YouTrack, Trello, Asana - и другие таск менеджера которые были использовании в ходе творческого поиска руководителей
-      проектов. Был опыт полного перестраивания процессов с целью избавления от ежедневной рутини и стандартизации процессов в
-      маленькой компании. Все же бесконечные просьбы и демонстрации не прошли даром. Были пройдены все круги ада в
-      построении инфраструктуры которая действительно способствовала процессам к!!!!!уда входили и конфигурации CI/DI для разных окружений.
-      Работа была выполнена, результатом которой стало упрощение процессов и осознание цены перестройки рабочих процессов.
-      Самым частым конечно же была Jira. Но моим однозначным фаворитом был YouTrack за простоту, гибкость и интуитивность интерфейса.
-      За Markdown и возможность составлять удобные дашборды.
+      ru: `Jira, YouTrack, Trello, Asana и другие таск-менеджеры использовались в поиске лучших способов управления проектами. У меня был опыт перестроения процессов в маленькой компании, чтобы избавиться от рутины и стандартизировать работу. Эти усилия, хоть и были долгими, дали результаты. Я прошел через все этапы, чтобы построить инфраструктуру, которая действительно поддерживала процессы, включая настройку CI/CD для разных окружений. В результате удалось упростить процессы и понять, как много стоит перестройка рабочих процессов. Чаще всего использовалась Jira, но моим фаворитом стал YouTrack из-за его простоты, гибкости и удобного интерфейса, а также поддержки Markdown и возможности создавать дашборды.
       `,
-      en: ''
+      en: `Jira, YouTrack, Trello, Asana and other task managers were used in the search for better ways to manage projects. I had the experience of redesigning processes in a small company to get rid of routine and standardize work. That effort, though long, yielded results. I went through the steps to build an infrastructure that truly supported the processes, including customizing CI/CD for different environments. As a result, I was able to simplify processes and realize how much it costs to redesign workflows. Jira was used most often, but YouTrack became my favorite because of its simplicity, flexibility and user-friendly interface, as well as Markdown support and the ability to create dashboards`
     },
     tags: [STACK_TAGS.Utilities]
 
   },
   {
     name: "Wiki's",
-    experience: "1 years",
+    experience: "3 years",
     logo: WikisLogo,
     description: {
       ru: `
-      Confluence использовался для работы - для личных нужд Notion. Оба инструмента обладают достаточным функционалом
-      за исключением некоторых ситуаций когда вы храните устаревшию версию и например при импорте таблицы из CSV нельзя выбрать
-      символ-разделитель и что большие статьи и таблицы приводят к некоторым проблемам при сохранении в Confluence.
+      Строил базы знаний, учился и продолжаю учиться лучше объяснять, как что-либо работает. Confluence для меня — необходимое зло, а Notion — лучший пример того, как база знаний может работать на тебя. Считаю важным уметь объяснить, что происходит. Чем эффективнее твой освоенный инструмент, тем даже самая плохая работа, например, после троих суток без сна, будет выглядеть лучше
       `,
-      en: ''
+      en: 'Building knowledge bases, learning and continuing to learn how to better explain how something works. Confluence is a necessary evil for me, and Notion is the best example of how a knowledge base can work for you. I think it's important to be able to explain what's going on. The more effective your learned tool is, the better even the worst work, for example after three days without sleep, will look better'
     },
     tags: [STACK_TAGS.Utilities]
 
@@ -130,14 +120,14 @@
       CSS, SCSS, styled components, css-modules и Emotion  я тоже оставлю тут.`,
       en: ''
     },
-    experience: "5 years",
+    experience: "8 years",
     logo: MarkdownLogo,
     tags: [STACK_TAGS.FrontEnd]
 
   },
   {
     name: "Python",
-    experience: "5 years",
+    experience: "8 years",
     logo: PythonLogo,
     description: {
       ru: `Изучения python я начал еще в университете чему способствовал Марк Лутц и его 4ое издание.
@@ -156,7 +146,7 @@
   },
   {
     name: "С++",
-    experience: "5 years",
+    experience: "1 year",
     logo: CppLogo,
     description: {
       ru: `Мой первый язык программирования. Когда я впервые увидел книгу Страуструпа - было страшно.
@@ -173,7 +163,7 @@
   },
   {
     name: "C#",
-    experience: "5 years",
+    experience: "6 months",
     logo: CSharpLogo,
     description: {
       ru: `.net and asp.net - только ознокомительные проекты, WinForm и стандартная библиотека. Последний раз освежал знания после выхода .asp.net.
@@ -185,7 +175,7 @@
   },
   {
     name: "PHP",
-    experience: "5 years",
+    experience: "1 year",
     logo: PHPLogo,
     description: {
       ru: `Я был молод мне нужны были деньги. В целом я использовал язык максимально как это было возможно. Начиная с
@@ -202,7 +192,7 @@
   },
   {
     name: "Assembler",
-    experience: "5 years",
+    experience: "2 years",
     logo: AssemblerLogo,
     description: {
       ru: `Теоритически по памяти я смогу написать заголовок программы, объявить переменную в DB и вывести ее поместив
@@ -217,7 +207,7 @@
   },
   {
     name: "Dart",
-    experience: "5 years",
+    experience: "6 months",
     logo: DartLogo,
     description: {
       ru: `Да это же Typescript. Крайний язык в изучении, по жизненому циклу похожий на javascript по синтаксису на обычный

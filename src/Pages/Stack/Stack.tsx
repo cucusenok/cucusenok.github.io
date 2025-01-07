@@ -38,7 +38,7 @@ const StackItem = ({item} : { item: StackType }) => {
                     </Typography>
                 </StackItemTitleContainer>
             </CardNavigationHeader>
-            <Typography variant={"body2"}
+            <Typography variant={"body1"}
                         textAlign={"start"}>
                 {item.description.en}
             </Typography>

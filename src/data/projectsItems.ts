@@ -14,10 +14,18 @@ import durex_admin from "../Resources/Projects/AppImages/durex/admin.png"
 
 import kia from "../Resources/Icons/companies/kia.svg"
 
-
-
 import map from "../Resources/Icons/companies/map.svg"
 import g5 from "../Resources/Icons/companies/5g.svg"
+
+
+import nextdocs_logo from "../Resources/Icons/companies/{ nextdocs }.png"
+import nextdocs_1 from "../Resources/Projects/AppImages/nextdocs/nextdocs1.png"
+import nextdocs_2 from "../Resources/Projects/AppImages/nextdocs/nextdocs2.png"
+
+import search_logo from "../Resources/Icons/companies/search.svg"
+import search_1 from "../Resources/Projects/AppImages/search/search1.png"
+import search_2 from "../Resources/Projects/AppImages/search/search2.png"
+
 
 import frieze_logo from "../Resources/Icons/companies/frieze.png"
 import frieze_1 from "../Resources/Projects/AppImages/frieze/img.png"
@@ -49,12 +57,45 @@ import acg_3 from "../Resources/Projects/AppImages/acg/img_2.png"
 
 export const PROJECT_ITEMS: Array<ProjectType> = [
     {
+        name: "NextDocs",
+        title: {
+            ru: "Генерирование документации к проекту на основе кода",
+            en: "Generating project documentation based on code"
+        },
+        url: "",
+        position: "Software Engineer",
+        logo: nextdocs_logo,
+        description: { ru: `Генерирование документации к проекту на основе кода`, en: `Generating project documentation based on code` },
+        text: {
+            ru: `Nextdocs.ai — это проект, цель которого — в два клика предоставить доступ к быстрой и удобной документации с встроенным WYSIWYG-редактором, напоминающим Notion. Поддерживаются режим совместного редактирования, встроенные диаграммы с коллаборацией и система доступа, синхронизированная с настройками GitHub, чтобы избежать лишних затрат времени на конфигурацию. Документация автоматически обновляется при изменении кода.
+      `,
+            en: `Nextdocs.ai is a project aimed at providing fast and user-friendly documentation in just two clicks, featuring a built-in WYSIWYG editor similar to Notion. It supports collaborative editing, integrated diagrams with real-time collaboration, and an access control system synchronized with GitHub settings to save time on configuration. Documentation updates automatically when the code changes.`
+        },
+        images: [nextdocs_1, nextdocs_2]
+    },
+    {
+        name: "Search Engine",
+        title: {
+            ru: "Поисковая и рекомендательная система",
+            en: "Search and recommendation system"
+        },
+        url: "",
+        position: "Head of research and development",
+        logo: search_logo,
+        description: { ru: `Промежуточные шаги в проектировании поисковой системы`, en: `Intermediate steps in the design of a search engine` },
+        text: {
+            ru: `Поисковая система с встроенной рекомендательной системой и автоматическим исправлением опечаток. В ходе работы были переработаны несколько концепций: векторное представление, TF-IDF, LLM, комбинаторика, алгоритмы типа Soundex, а также применения алгоритмов Левенштейна, Демерау-Левенштейна, Хемиша, префиксный индекс и их комбинации. Также было проведено нагрузочное тестирование вспомогательного ПО, включая Postgres, ElasticSearch, Clickhouse, VectorDB и Redis`,
+            en: `A search system with an integrated recommendation system and automatic typo correction. During the work, several concepts were reworked: vector representation, TF-IDF, LLM, combinatorics, algorithms like Soundex, and the application of Levenshtein, Damerau-Levenshtein, Hemish algorithms, prefix indexing, and various combinations of these algorithms. Load testing was also conducted for supporting software, including Postgres, ElasticSearch, Clickhouse, VectorDB, and Redis`
+        },
+        images: [search_1, search_2]
+    },
+    {
         name: "5G(O-RAN)",
         title: {
             ru: "Конфигурация устройств 3gpp/LTE/5g в архитектуре O-RAN",
             en: "Configuration of devices 3gpp/LTE/5g in O-RAN architecture"
         },
-        url: "",
+        url: "https://nextdocs.ai/",
         position: "Software Engineer",
         logo: g5,
         description: { ru: `Разработка системы мониторинга и конфигурации устройств 3gpp/LTE/5g в архитектуре O-RAN`, en: `Development of 3gpp/LTE/5g device monitoring and configuration system in O-RAN architecture` },

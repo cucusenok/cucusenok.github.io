@@ -28,39 +28,122 @@ import DesignLogo from "../Resources/Icons/stack_icons/Design.svg";
 
 export const STACKS_ITEMS: Array<StackType> = [
     {
-        name: "JavaScript",
-        experience: "5 years",
+        name: "Python",
+        experience: "8 years",
+        logo: PythonLogo,
+        description: {
+            ru: `Изучения python я начал еще в университете чему способствовал Марк Лутц и его 4ое издание.
+            FastApi, Flask, Django, SqlAlchemy, pytest, pygame, opencv, robust video matting,
+            asyncio, TensorFlow и gensim, torch, spacy, nltk, HuggingFace, openai, pandas, numpy, moviepy, whisperx, psycopg2, Word2Vec, Doc2Vec, FastText
+      `,
+            en: `I started learning Python when I was in university, thanks to Mark Lutz and his 4th edition. 
+            FastApi, Flask, Django, SqlAlchemy, pytest, pygame, opencv, robust video matting,
+            asyncio, TensorFlow и gensim, torch, spacy, nltk, HuggingFace, openai, pandas, numpy, moviepy, whisperx, psycopg2, Word2Vec, Doc2Vec, FastText.
+      `
+        },
+        tags: [STACK_TAGS.BackEnd]
+
+    },
+    {
+        name: "JavaScript & Typescript",
+        experience: "7 years",
         logo: JsLogoPng,
         description: {
             ru: `Все началось с HTML и jquery.
       Потом хотелось улучшать интерфейсы после чего работать над интерфейсами,
       особено нравилось работать над новыми идеями в UX. За все время работы с js
-      я делал десятки лендингов, web-terminal, редактор кода, стриминговые сервисы для игр используя
-      pixel-streaming от Unreal Engine и видео стриминг используя HLS и ffmpeg для небольших проектов.
-      Для таких проектов основными инструментами для разработки приложений стали react и vue и material ui.
-      Автоматическая генерация форм на основе jsonschema которая составлялась на основе yang-моделей. Я адаптировал
-      стили встроенных сторонних frame'оф, используя MutationObserver.
+      я делал десятки лендингов, web-terminal, редактор кода, WYSIWYpG-редактор, стриминговые сервисы для игр используя
+      pixel-streaming от Unreal Engine и видео стриминг используя HLS и ffmpeg для небольших проектов, 3d, анимации.
+      Автоматическая генерация форм на основе jsonschema которая составлялась на основе yang-моделей..
       Приходилось решать проблемы оптимизации, решать проблемы с redux, который не был способен так быстро
       сохранять данные. Фото-редактор основанный на canvas и fabric.js интерфейс похожий на Figma Jam реализованый в DOM
       с добавлением чуть-чуть SVG. Dashboards с собсвенным DSL, графики, визуализация данных используя ApexChart, d3 и Recharts.
-      Node.js для создания бекенда я выбирал редко, в основном когда были очень хорошие библиотеки решаюшие бизнес задачи и создавался
-      отдельный микросервис или когда понимал, что команда сможет поддерживать только js.
+      NodeJS, next.js, SSR, meteor, WebSocket, zod, парсинг кода в AST и кажется еще столько же я забыл.
       `,
-            en: `Everything started with the HTML and jquery.
-      Then I aimed to enhance interfaces and devoted myself to working on them. I especially liked working on new ideas in UX.
-      In all the time I've been working with js I've made dozens of website builds, web-terminal, code editor, streaming services for games using pixel-streaming from Unreal Engine and video streaming using HLS and ffmpeg for small projects.
-      For these projects, react and vue and material ui became the main tools for application development.
-      Automatic form generation based on jsonschema which was based on yang-models. I adapted the styles of embedded third-party frames using MutationObserver.
-      I had to deal with optimization issues, dealing with redux, which wasn't able to save data as fast. Photo editor based on canvas and fabric.js interface similar to Figma Jam implemented in DOM with a bit of SVG included.
-      Dashboards with custom DSL, charts, data visualization using ApexChart, d3 and Recharts.
-      I've rarely used Node.js for the backend, mostly when I had very good libraries to solve business problems and created a separate microservice or when I realized that the team could only support js.
-      `
+            en: `It all started with HTML and jquery.
+      Then I wanted to improve interfaces and then work on interfaces,
+      I especially liked to work on new ideas in UX. Throughout my time working with js.
+      I've made dozens of web-landings, web-terminal, code editor, WYSIWYG editor, streaming services for games using
+      pixel-streaming from Unreal Engine and video streaming using HLS and ffmpeg for small projects, 3d, animation.
+      Automatic generation of forms based on jsonschema which was made on the basis of yang-models.
+      Had to solve optimization problems, had to solve problems with redux, which was not able to so quickly
+      to save data as fast. Photo editor based on canvas and fabric.js interface similar to Figma Jam implemented in DOM.
+      with a little bit of SVG thrown in. Dashboards with its own DSL, charts, data visualization using ApexChart, d3 and Recharts.
+      NodeJS, next.js, SSR, meteor, WebSocket, zod, parsing code in AST and I think I forgot as much more.`
         },
         tags: [STACK_TAGS.FrontEnd]
     },
     {
-        name: "React",
+        name: "GoLang",
         experience: "3 years",
+        logo: GoLangLogo,
+        description: {
+            ru: `Изначально все ради проекта gomusic.to — поиск музыки, генрация изображений. В последствии, сделал на Go поисковую систему, NER и кучу другого
+      микросервисного бекенда, обожаю этот язык.
+      Контекст, горутины, каналы и гексогональная архитектура.`,
+            en: `Initially all for the project gomusic.to - music search, image genration. Later, I made Go search engine, NER and a lot of other microservice backend.
+      microservice backend, I love that language.
+      `
+        },
+        tags: [STACK_TAGS.BackEnd]
+    },
+    {
+        name: "AI & ML, NLP",
+        experience: "4 years",
+        logo: NLP_Logo,
+        description: {
+            ru: `
+            C того момента, как я осознал, что слова можно превратить в цифры и применять к ним математические операции,
+             я увлёкся этим процессом. Всё началось с попыток обучать модели на BERT на старом компьютере и продолжилось
+              с появлением статьи Attention is All You Need. Я занимался созданием классификаторов, систем распознавания именованных сущностей (NER),
+               исправлением опечаток, анализом тональности, разработкой собственных токенизаторов, составлением кратких содержаний,
+                системой документирования кода, RAG и, конечно, работой с LLM.
+              В рамках работы с изображениями и видео, сделал систему генерации рекламных роликов на основе Robust Video Matting, opencv, moviepy и whisperx. 
+      `,
+            en: `From the moment I realized that words could be turned into numbers and mathematical operations could be applied to them,
+             I was fascinated by the process. It started with trying to train BERT models on an old computer and continued with Attention is All You Need.
+              I've been building classifiers, Named Entity Recognition (NER) systems, typo correction, tonality analysis, developing custom tokenizers,
+               concise content composition, code documentation systems, RAG, and of course, working with LLMs
+               As part of image and video work, made a system for ads generating based on Robust Video Matting, opencv, moviepy and whisperx.
+
+      `
+        },
+        tags: [STACK_TAGS.Utilities]
+    },
+    {
+        name: "SQL",
+        experience: "8 years",
+        logo: SQLLogo,
+        description: {
+            ru: `Пишу еще с университета, знаю про EXPLAIN ANALYSE, зачем нужны разные индексы, прочитал несколько книг про внутренее устройство Postgres.
+                Postgres — основная sql база данных с которой работал, вторая — Clickhouse, так же есть опыт с MsSQL. В состоянии написать сложные рекурсивные запросы,
+                оптимизировать их, а так же предварительно тестировать базы данных для ожидаемой нагрузки`,
+            en: `I have been writing since university, I know about EXPLAIN ANALYSE, why different indexes are needed, I have read several books about Postgres internals.
+                Postgres is the main sql database I worked with, the second one is Clickhouse, I also have experience with MsSQL. I am able to write complex recursive queries,
+                optimize them, as well as pre-test databases for the expected load.`
+        },
+        tags: [STACK_TAGS.BackEnd]
+
+    },
+    {
+        name: "Docker",
+        experience: "4 years",
+        logo: DockerLogo,
+        description: {
+            ru: `Опыт в создании контейнеров для сборки frontend и запуска приложений на Go, Python, Node.js, PHP, Postgres, ELK, Reddis, Rabbit, VPN.
+      Иногда docker яявлялся не очевидным решением для некоторых промежуточных модулей, которые могли работать только с глобальными
+      настройками и зависимостями. В состоянии описать образ, настроить сеть, смонтировать volume и не забыть явно привязать порт с 127.0.0.1.
+      `,
+            en: `Experience in building containers to build frontend and run Go, Python, Node.js, PHP, Postgres, ELK, Reddis, Rabbit, VPN.
+      Sometimes docker was not an obvious solution for some middleware modules that could only work with global settings and dependencies.
+      Be able to describe the image, configure the network, mount the volume and don't forget to explicitly bind the port to 127.0.0.1.`
+        },
+        tags: [STACK_TAGS.Utilities]
+
+    },
+    {
+        name: "React",
+        experience: "5 years",
         logo: ReactLogo,
         description: {
             ru: `Вперые я столкнулся с React когда наш фронтенд разработчик сдался в попытках понять кучу
@@ -70,50 +153,22 @@ export const STACKS_ITEMS: Array<StackType> = [
       redux-toolkit. Сложные рекурсивные компоненты, построение интерфейсов на основе DSL, построение UI систем
       согласованных с задумкой дизайнера как это возможно. WebSocket, WebRTC, Pixel Streaming от Unreal Engine.
       Тестирование компонентов и использование Storybook'ов.
-      Небольшой опыт с SSR & SSG.
+      Опыт с SSR & SSG.
       `,
             en: `I first experienced React when our frontend developer gave up trying to understand a bunch of Pipes written in a functional style. It was an extreme dive, but sometimes it works.
       I use class components when I can't use functional components - the code is cleaner. I mostly use redux Reducing the risks of finding frontend developers.
       TI have worked with Thunk and Sagas, as well as mobX and effector, but in recent years I have been primarily using redux-toolkit. Complex recursive components, building DSL based interfaces,
       building UI systems UI systems with designer's idea of what's possible. WebSocket, WebRTC, Pixel Streaming from Unreal Engine.
       Component testing and using Storybooks.
-      Little experience with SSR & SSG.`
+      Experience with SSR & SSG.`
 
         },
         tags: [STACK_TAGS.FrontEnd]
-
-    },
-    {
-        name: "Vue",
-        experience: "1 years",
-        logo: VueLogo,
-        description: {
-            ru: `Vue & vuex. Последние проекты сделал на Typescript. Сервис для стриминга видео
-      и интерфейс управления проектом на Unreal Engine через Pixel Streaming.
-      `,
-            en: `Vue & vuex. The last projects I did in Typescript. Video streaming service Project management interface on Unreal Engine via Pixel Streaming.`
-        },
-        tags: [STACK_TAGS.FrontEnd]
-
-    },
-    {
-        name: "ffmpeg",
-        experience: "1 years",
-        logo: FFmpegLogo,
-        description: {
-            ru: `Настольная утилита на все случаи жизни. Разбить 4к видео на маленькие фрагменты разного размера и качества.
-      Конвертировать формат изображений или превратить mp3 в wav или pcm. Даже использовал его на бекенде чтобы подготавливать
-      фотографии загруженные пользователем - работало быстрее.
-      `,
-            en: `A desktop utility for all occasions. Split 4k video into small fragments of different size and quality.
-      Convert image format or turn mp3 to wav or pcm. I even used it on the backend to prepare photos uploaded by user and it worked faster.`
-        },
-        tags: [STACK_TAGS.Utilities]
 
     },
     {
         name: "JetBrains",
-        experience: "1 years",
+        experience: "10 years",
         logo: JetbrainsLogo,
         description: {
             ru: `В какой-то момент я осознано принял для себя решение, что безумно удобно скачать IDE для любого
@@ -134,7 +189,7 @@ export const STACKS_ITEMS: Array<StackType> = [
     },
     {
         name: "Tasks Management ",
-        experience: "1 years",
+        experience: "8 years",
         logo: TasksManagementLogo,
         description: {
             ru: `Jira, YouTrack, Trello, Asana - и другие таск менеджера, которые были использовании в ходе творческого поиска руководителей
@@ -158,7 +213,7 @@ export const STACKS_ITEMS: Array<StackType> = [
     },
     {
         name: "Wiki's",
-        experience: "1 years",
+        experience: "3 years",
         logo: WikisLogo,
         description: {
             ru: `
@@ -196,34 +251,8 @@ export const STACKS_ITEMS: Array<StackType> = [
 
     },
     {
-        name: "Python",
-        experience: "5 years",
-        logo: PythonLogo,
-        description: {
-            ru: `Изучения python я начал еще в университете чему способствовал Марк Лутц и его 4ое издание.
-      Коммерчески поработать с python много не удалось, в основном это были небольшие микросервисы на Flask или FastApi.
-      Тот же Django использовался только для университетских проектов. Python для меня был самым главным инструментом
-      для решения любых задач: парсинг и скрапинг, тестирование возможностей стороних библиотек, боты, а так же интерфейсы
-      используя tkinter и PyQt.
-      Это был язык, который спас меня от MatLab, когда я проходил практику в Институте Искуственного Интеллекта где я познакомился
-      с Word2Vec, Doc2Vec, FastText, TensorFlow и gensim в NLP, благодаря которым, я написал свою дипломную работу и использовал
-      классификаторы, как микросервис обернутый в Flask.
-      `,
-            en: `I started learning Python when I was in university, thanks to Mark Lutz and his 4th edition. 
-            Although I didn't have much commercial experience with Python, I worked on small microservices using Flask or FastApi. 
-            I only used Django for university projects. Python was my go-to tool for a variety of tasks such as parsing and scraping, 
-            testing third-party libraries, building bots, and creating interfaces using tkinter and PyQt. 
-            It was the language that helped me move away from MatLab during an internship at the Artificial Intelligence Institute, 
-            where I was introduced to NLP tools such as Word2Vec, Doc2Vec, FastText, TensorFlow, and gensim. 
-            These tools allowed me to write my graduate work and build classifiers as a microservice wrapped in Flask.
-      `
-        },
-        tags: [STACK_TAGS.BackEnd]
-
-    },
-    {
         name: "С++",
-        experience: "5 years",
+        experience: "1 years",
         logo: CppLogo,
         description: {
             ru: `Мой первый язык программирования. Когда я впервые увидел книгу Страуструпа - было страшно.
@@ -257,7 +286,7 @@ export const STACKS_ITEMS: Array<StackType> = [
     },
     {
         name: "PHP",
-        experience: "5 years",
+        experience: "1 year",
         logo: PHPLogo,
         description: {
             ru: `Я был молод мне нужны были деньги. В целом я использовал язык максимально как это было возможно. Начиная с
@@ -280,7 +309,7 @@ export const STACKS_ITEMS: Array<StackType> = [
     },
     {
         name: "Assembler",
-        experience: "5 years",
+        experience: "2 years",
         logo: AssemblerLogo,
         description: {
             ru: `Теоритически по памяти я смогу написать заголовок программы, объявить переменную в DB и вывести ее поместив
@@ -298,7 +327,7 @@ export const STACKS_ITEMS: Array<StackType> = [
     },
     {
         name: "Dart",
-        experience: "5 years",
+        experience: "6 months",
         logo: DartLogo,
         description: {
             ru: `Да это же Typescript. Крайний язык в изучении, по жизненому циклу похожий на javascript по синтаксису на обычный
@@ -328,56 +357,13 @@ export const STACKS_ITEMS: Array<StackType> = [
         tags: [STACK_TAGS.Mobile]
     },
     {
-        name: "GoLang",
-        experience: "6 months",
-        logo: GoLangLogo,
-        description: {
-            ru: `Все ради проекта gomusic.to. Наш бекенд разработчик писал на всем что кодировалось. Он влюбился Go,
-      наш DevOps чуть-чуть писал на Go и умел с ним работать. Он продал нам эту идею, но потом потерял интерес к проекту.
-      Я уже говорил, что экстремальное погружение в язык программирования работает, когда нужно?
-      Контекст, горутины, каналы и гексогональная архитектура. Судя по всему идея упрощения и оптимизации языка
-      работает действительно хорошо и с языком получилось ознакомится достаточно быстро. `,
-            en: `The project, gomusic.to, had its UI implemented as per the design specifications. 
-            I became proficient in the BLoC methodology and applied it in the project. 
-            The application was successfully built for Android, iOS, and web. I rewrote necessary cross-platform libraries and also wrote my own libraries, 
-            which communicate through MethodChannel. When faced with the decision of choosing a framework for cross-platform development, 
-            I took a risk with Flutter after considering my analysis and experience with alternatives like ReactNative, and I do not regret it. 
-            Although the project is not perfect, it has surprised me in the same way that QT did.
-      `
-        },
-        tags: [STACK_TAGS.BackEnd]
-    },
-    {
-        name: "AI & ML for NLP",
-        experience: "6 months",
-        logo: NLP_Logo,
-        description: {
-            ru: `В университете мне понравилась сама возможность и ход мыслей для решения задачь NLP.
-      В целом то, что я обрел в этой области - это красоту применения математики для решения проблем.
-      Слова представленные в многомерном пространстве... По собственным ощущением мне удалось обрести определенный
-      склад ума для решения подобных задач, когда явным алгоритмом проблема не решается.
-      Благодаря этой области я пользовался TensorFlow, gensim, kaggle и загружал компьютер на 44 часа когда тестировал
-      автоматический набор параметров. В данный момент это просто хобби 😃
-      `,
-            en: `At university, I loved the very possibility and thought process for solving NLP problems.
-      Overall, what I found in this field was the beauty of applying mathematics to problem solving.
-      Words presented in multidimensional space... I feel I've been able to acquire a certain
-      mindset for solving such problems, when the explicit algorithm doesn't solve the problem.
-      Thanks to this area, I used TensorFlow, gensim, kaggle, and loaded my computer for 44 hours when testing
-      automatic parameter set. At the moment it's just a hobby 😃
-      `
-        },
-        tags: [STACK_TAGS.Utilities]
-    },
-    {
         name: "Testing",
-        experience: "6 months",
+        experience: "8 years",
         logo: TestingLogo,
         description: {
-            ru: `Тестирование интерфейсов используя White Framework(c#). Тестирование Web интерфейсов используя
-      Selenium(python, js), нагрузочное тестирование через JMeter и Yandex.Tank, опыт с Cucumber и синтаксисом Gherkin.
+            ru: `Опыт в тестировании включает использование White Framework (C#) для тестирования интерфейсов, Selenium (Python, JS) для веб-интерфейсов, а также нагрузочное тестирование с помощью JMeter и Yandex.Tank. Имеется опыт работы с Cucumber и синтаксисом Gherkin, тестированием кроссплатформенных приложений, а также с инструментами Jest, pytest для тестирования приложений на GoLang и проведения интеграционного тестирования.
       `,
-            en: `Testing interfaces using White Framework(c#). Web interface testing using Selenium(python, js), load testing via JMeter and Yandex.Tank, experience with Cucumber and Gherkin syntax.`
+            en: `Experience in testing includes using White Framework (C#) for testing interfaces, Selenium (Python, JS) for web interfaces, and load testing with JMeter and Yandex.Tank. Experienced with Cucumber and Gherkin syntax, testing cross-platform applications, as well as Jest, pytest tools for testing GoLang applications and performing integration testing`
         },
         tags: [STACK_TAGS.Utilities]
     },
@@ -398,50 +384,48 @@ export const STACKS_ITEMS: Array<StackType> = [
         tags: [STACK_TAGS.Utilities]
     },
     {
-        name: "Docker",
-        experience: "6 months",
-        logo: DockerLogo,
+        name: "Flask & Fast Api",
+        experience: "2 months",
+        logo: FlaskFastLogo,
         description: {
-            ru: `Опыт в создании контейнеров для сборки frontend и запуска приложений на Go, Python, Node.js, PHP и Postgres.
-      Иногда docker яявлялся не очевидным решением для некоторых промежуточных модулей, которые могли работать только с глобальными
-      настройками и зависимостями. В состоянии описать образ, настроить сеть, смонтировать volume.
+            ru: `Опыт в создании REST приложений, есть опыт в запуске нескольких воркеров используя uvicorn, сотни часов деббага для хорошей асинхронной работы используя asyncio.
+                Делал обертки для ML моделей, LLM, NER, поисковой системы и просто CRUD`,
+            en: `Experience in building REST applications, have experience in running multiple wokers using uvicorn, hundreds of hours of debugging for good asynchronous work using asyncio.
+                Have done wrappers for ML models, LLM, NER, search engine and just CRUD`
+        },
+        tags: [STACK_TAGS.BackEnd]
+    },
+    {
+        name: "Vue",
+        experience: "1 years",
+        logo: VueLogo,
+        description: {
+            ru: `Vue & vuex. Последние проекты сделал на Typescript. Сервис для стриминга видео
+      и интерфейс управления проектом на Unreal Engine через Pixel Streaming.
       `,
-            en: `Experience in building containers to build frontend and run Go, Python, Node.js, PHP and Postgres applications.
-      Sometimes docker was not an obvious solution for some middleware modules that could only work with global settings and dependencies.
-      Being able to describe an image, configure a network, mount a volume.`
+            en: `Vue & vuex. The last projects I did in Typescript. Video streaming service Project management interface on Unreal Engine via Pixel Streaming.`
+        },
+        tags: [STACK_TAGS.FrontEnd]
+
+    },
+    {
+        name: "ffmpeg",
+        experience: "3 years",
+        logo: FFmpegLogo,
+        description: {
+            ru: `Настольная утилита на все случаи жизни. Разбить 4к видео на маленькие фрагменты разного размера и качества.
+      Конвертировать формат изображений или превратить mp3 в wav или pcm. Даже использовал его на бекенде чтобы подготавливать
+      фотографии загруженные пользователем - работало быстрее.
+      `,
+            en: `A desktop utility for all occasions. Split 4k video into small fragments of different size and quality.
+      Convert image format or turn mp3 to wav or pcm. I even used it on the backend to prepare photos uploaded by user and it worked faster.`
         },
         tags: [STACK_TAGS.Utilities]
 
     },
     {
-        name: "Flask & Fast Api",
-        experience: "6 months",
-        logo: FlaskFastLogo,
-        description: {
-            ru: `Опыт в создании простых REST приложений выполняющих CRUD операции или роль легкой HTTP обертки для классификаторов на Python.`,
-            en: `Experience in creating simple REST applications that perform CRUD operations and the role of a lightweight HTTP wrapper for classifiers in Python.`
-        },
-        tags: [STACK_TAGS.BackEnd]
-    },
-    {
-        name: "SQL",
-        experience: "3 months",
-        logo: SQLLogo,
-        description: {
-            ru: `Язык структиророванных запросов созданный для баз данных, созаднных на основе реляционной алгебры.
-      Если упрощать, то фактически SQL является стандартом, а реализация и поддержка зависит от производителя обеспечения самих баз данных
-      также как и других внутренних.
-      Postgres`,
-            en: `I have experience with SQL, a structured query language used for managing relational databases. 
-            SQL is a standard, with the specifics of its implementation and support varying among different database software manufacturers. 
-            Specifically, I have experience with Postgres.`
-        },
-        tags: [STACK_TAGS.BackEnd]
-
-    },
-    {
         name: "ElasticSearch",
-        experience: "3 months",
+        experience: "1 year",
         logo: ElasticsearchLogo,
         description: {
             ru: `В рамках одного из проектов была задача разработать платформу для оркестрирования приложения.
@@ -449,11 +433,13 @@ export const STACKS_ITEMS: Array<StackType> = [
       например ElasticSearch и Influx, а так же смог бы разделять созданные индексы по правам пользователей (используя SSO).
       Для эластика дополнительно были созданы инструменты частично повторяющие функционал Kibana.
       Сложные агрегационные запросы, теггирование, настройка индексов и привилегий.
+      Более серьезный опыт был когда работал над поисковыми системами, в последствии отказался — медленный. 
       `,
             en: `I was part of a project with the objective to create a platform for application orchestration. 
             We developed an interface that enables the visualization of data from sources such as ElasticSearch and Influx, 
             and to categorize the indexes based on user rights using Single Sign-On (SSO). We also created supplementary tools for Elastic that mimic some of the features of Kibana. 
             These tools include complex aggregation queries, tagging, index customization, and privilege customization.
+            More serious experience was when working on search engines, subsequently gave up - slow.
       `
         },
         tags: [STACK_TAGS.Utilities]
@@ -472,20 +458,15 @@ export const STACKS_ITEMS: Array<StackType> = [
 
     },
     {
-        name: "UI/UX & Figma",
-        experience: `3 month`,
+        name: "UI/UX",
+        experience: `4 yers`,
         logo: DesignLogo,
         description: {
-            ru: `Я часто работал над проектами, где в команде не было дизайнера, так я и погрузился в тему пользовательского опыта, 
-            я часто создавал дизайн и придумывал решения на ходу во время фронтенд разработки. Для меня всегда было важно, как именно человек будет пользоваться моим интерфейсом, 
-            я по максимуму упрощаю, минимизирую количество шагов, и добавляю пояснения, где есть вероятность заблудиться.  Для более объемных задач я освоил фигму.  
-            Даже глубже чем дизайнеры - я писал плагины для нее, для автоматизации некоторых рутинных задач. Но на этом мой путь в дизайне только начинался. 
-            Для создания своего приложения мне было необходимо погрузиться в тему пользовательского взаимодействия. Я изучил принципы UX, 
-            узнал о законах построения дизайна и психологии восприятия пользователями. Так же капнул в сторону UI, с учетом моей деятельности, как разработчика - у меня уже была настроенность и я понимал, 
-            какой интерфейс проживет на рынке несколько следующих лет, исходя из этого я и создал дизайн для Gomusic.to. Так же беря во внимание привычные паттерны поведения 
-            (например я добавил строку ввода ссылки, несмотря на то, что приложение автоматически считывает буфер, для того, чтобы человек понял, что от него требуется вернуться в приложение со ссылкой - 
-            просто и понятно, без лишних слов)`,
-            en: 'I worked a lot on projects where the team didn\'t have a designer, so I got immersed in the topic of user experience, I was often designing and coming up with solutions on the go during frontend development. It\'s always been important to me exactly how a person would use my interface, I simplify as much as possible, minimize the number of steps, and add explanations where there\'s a chance of getting lost.  For more extensive tasks, I\'ve learned Figma.  Even deeper than designers - I wrote plugins for it, to automate some routine tasks. But that was only the beginning of my design journey. To create my app, I needed to dive into the topic of user interaction. I studied the principles of UX, learned about the laws of design construction and the psychology of user perception. I also dug into UI, taking into account my background as a developer - I already had an attitude and understanding of what kind of interface would be good for the next few years, so I created the design for Gomusic.to. Also taking into account the usual patterns of behavior (for example I added a link input line, even though the app automatically reads the buffer, so that the person understands that he has to go back to the app with the link - simple and clear, without any extra words)'
+            ru: `В своей практике я часто работал над проектами, где в команде не было дизайнера, что и привело меня к глубокому изучению пользовательского опыта. Я часто создавал дизайн и находил решения в процессе фронтенд-разработки. Для меня всегда было важно, как именно пользователь взаимодействует с интерфейсом: я стремлюсь максимально упростить процесс, минимизировать количество шагов и добавлять пояснения в местах, где существует вероятность запутаться. Для более сложных задач я освоил Figma, даже создавал плагины для автоматизации рутинных процессов, что выходило за рамки стандартной работы дизайнеров.
+                 Однако это было лишь начало моего пути в дизайне. Создавая свое приложение, мне было необходимо углубиться в тему взаимодействия с пользователем. Я изучил принципы UX, законы дизайна и психологию восприятия, а также немного вник в UI-дизайн. Как разработчик, я уже понимал, какой интерфейс будет актуален на рынке в течение нескольких лет. При разработке я учитывал привычные паттерны поведения пользователей.
+`,
+            en: `In my practice, I often worked on projects where there was no designer on the team, which led me to deep learning about user experience. I often created designs and found solutions in the frontend development process. How exactly the user interacts with the interface has always been important to me: I strive to simplify the process as much as possible, minimizing the number of steps and adding explanations in places where there is a likelihood of confusion. For more complex tasks, I mastered Figma, even creating plugins to automate routine processes that went beyond the standard work of designers.
+                 However, this was only the beginning of my design journey. Creating my own application, I needed to delve deeper into the topic of user interaction. I studied UX principles, design laws, and the psychology of perception, and delved a bit into UI design. As a developer, I already understood what kind of interface would be relevant in the market within a few years. When designing, I took into account familiar patterns of user behavior.`
         },
         tags: [STACK_TAGS.FrontEnd]
     },
