@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.f4503956.css",
-    "main.js": "/static/js/main.87dc25ad.js",
+    "main.js": "/static/js/main.59bddc24.js",
     "static/js/787.a71561b8.chunk.js": "/static/js/787.a71561b8.chunk.js",
     "static/media/img_1.png": "/static/media/img_1.5654cafd24fbf7abb7d9.png",
     "static/media/img_2.png": "/static/media/img_2.21ab53e2d3c1e6184710.png",
@@ -12,11 +12,16 @@
     "static/media/img_5.png": "/static/media/img_5.7387f9dae862a125ab02.png",
     "static/media/3in1.png": "/static/media/3in1.3c63b6d003c632eabddb.png",
     "static/media/app.png": "/static/media/app.b819abc7db74e33b96aa.png",
+    "static/media/nextdocs1.png": "/static/media/nextdocs1.2cab2e7cb7685401f317.png",
     "static/media/admin.png": "/static/media/admin.f8ba413e1e0b8f77f58a.png",
+    "static/media/nextdocs2.png": "/static/media/nextdocs2.4120b10aabb57607fe08.png",
+    "static/media/search1.png": "/static/media/search1.b0d76cad4bd45cb3b7d8.png",
+    "static/media/search2.png": "/static/media/search2.c787f35b3d4893d691a2.png",
     "static/media/frieze.png": "/static/media/frieze.2b1f463d0e92a2a0bda8.png",
     "static/media/sightline.png": "/static/media/sightline.9027713a8efb8b032d80.png",
     "static/media/flask_fast.svg": "/static/media/flask_fast.1f2d37bde4f7ac11b7b9e95032191ff0.svg",
     "static/media/Flutter.svg": "/static/media/Flutter.bdd708aebe7d021e8abd7af47b9d9832.svg",
+    "static/media/search.svg": "/static/media/search.9d6283eca3ca16603475820efe0265b8.svg",
     "static/media/InstagramIcon.svg": "/static/media/InstagramIcon.86e7ac29733e6a994feb6f12d7ab31c0.svg",
     "static/media/durex.svg": "/static/media/durex.a557e290a748e9bd0d0d98f54e609958.svg",
     "static/media/bike_net.svg": "/static/media/bike_net.51a8a06c3c25a0fdb78ee21ae106f14e.svg",
@@ -52,11 +57,11 @@
     "static/media/vue.svg": "/static/media/vue.a9b1a248e57c284128ac7df417d1bf56.svg",
     "static/media/ContactWaveBackground.svg": "/static/media/ContactWaveBackground.c1483647b8769c69fb5968a15df64fec.svg",
     "main.f4503956.css.map": "/static/css/main.f4503956.css.map",
-    "main.87dc25ad.js.map": "/static/js/main.87dc25ad.js.map",
+    "main.59bddc24.js.map": "/static/js/main.59bddc24.js.map",
     "787.a71561b8.chunk.js.map": "/static/js/787.a71561b8.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f4503956.css",
-    "static/js/main.87dc25ad.js"
+    "static/js/main.59bddc24.js"
   ]
 }
