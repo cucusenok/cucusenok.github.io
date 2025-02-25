@@ -62,7 +62,7 @@ export const PROJECT_ITEMS: Array<ProjectType> = [
             ru: "Генерирование документации к проекту на основе кода",
             en: "Generating project documentation based on code"
         },
-        url: "",
+        url: "http://nextdocs.ai",
         position: "Software Engineer",
         logo: nextdocs_logo,
         description: { ru: `Генерирование документации к проекту на основе кода`, en: `Generating project documentation based on code` },
@@ -95,7 +95,7 @@ export const PROJECT_ITEMS: Array<ProjectType> = [
             ru: "Конфигурация устройств 3gpp/LTE/5g в архитектуре O-RAN",
             en: "Configuration of devices 3gpp/LTE/5g in O-RAN architecture"
         },
-        url: "https://nextdocs.ai/",
+        url: "https://www.nokia.com/networks/5g",
         position: "Software Engineer",
         logo: g5,
         description: { ru: `Разработка системы мониторинга и конфигурации устройств 3gpp/LTE/5g в архитектуре O-RAN`, en: `Development of 3gpp/LTE/5g device monitoring and configuration system in O-RAN architecture` },
@@ -172,7 +172,7 @@ export const PROJECT_ITEMS: Array<ProjectType> = [
             ru: "Приложение для того чтобы распозновать и делиться музыкой.",
             en: "App for sharing and recognition music"
         },
-        url: "https://bike.net",
+        url: "https://web.gomusic.to",
         position: "Software Engineer",
         logo: go_music,
         description: { en: `Application for music sharing and recognition.`, ru: 'Интеграция маркетплейса в социальную сеть для велосипедистов' },
@@ -239,7 +239,7 @@ export const PROJECT_ITEMS: Array<ProjectType> = [
             ru: "Стриминговый сервис для подбора квартиры",
             en: "Streaming service for apartments viewing"
         },
-        url: "https://www.sightline.se/neo4-web?lang=en",
+        url: "https://www.locka.com/",
         position: "Frontend Engineer",
         logo: sightline,
         description: { en: `Streaming service for apartment previews.`, ru: 'Стриминговый сервис для просмотра апартаментов.' },
@@ -268,7 +268,7 @@ export const PROJECT_ITEMS: Array<ProjectType> = [
             ru: "Онлайн галерея",
             en: "Online Viewing Room",
         },
-        url: "https://www.sightline.se/neo4-web?lang=en",
+        url: "https://www.frieze.com/",
         position: "Frontend Engineer",
         logo: frieze_logo,
         description: { en: `Integration viewing room gallery to the site.`, ru: 'Integration of an online gallery on the website.' },
@@ -321,7 +321,7 @@ export const PROJECT_ITEMS: Array<ProjectType> = [
             ru: "Система автоматической отчетности",
             en: "The automatic reporting system"
         },
-        url: "https://m.vk.com/app6999162",
+        url: "https://kia.com/",
         position: "Software Engineer",
         logo: kia,
         description: { ru: `Система для создания автоматической отчетности диллеров автомобилей KIA по всей стране`, en: `System for creating automatic reporting of KIA car dealers across the country` },
