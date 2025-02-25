@@ -75,7 +75,7 @@ export const STACKS_ITEMS: Array<StackType> = [
     },
     {
         name: "GoLang",
-        experience: "3 years",
+        experience: "4 years",
         logo: GoLangLogo,
         description: {
             ru: `Изначально все ради проекта gomusic.to — поиск музыки, генрация изображений. В последствии, сделал на Go поисковую систему, NER и кучу другого
@@ -127,7 +127,7 @@ export const STACKS_ITEMS: Array<StackType> = [
     },
     {
         name: "Docker",
-        experience: "4 years",
+        experience: "5 years",
         logo: DockerLogo,
         description: {
             ru: `Опыт в создании контейнеров для сборки frontend и запуска приложений на Go, Python, Node.js, PHP, Postgres, ELK, Reddis, Rabbit, VPN.
@@ -252,7 +252,7 @@ export const STACKS_ITEMS: Array<StackType> = [
     },
     {
         name: "С++",
-        experience: "1 years",
+        experience: "2 years",
         logo: CppLogo,
         description: {
             ru: `Мой первый язык программирования. Когда я впервые увидел книгу Страуструпа - было страшно.
@@ -273,7 +273,7 @@ export const STACKS_ITEMS: Array<StackType> = [
     },
     {
         name: "C#",
-        experience: "5 years",
+        experience: "1 year",
         logo: CSharpLogo,
         description: {
             ru: `.net and asp.net - только ознокомительные проекты, WinForm и стандартная библиотека. Последний раз освежал знания после выхода .asp.net.
@@ -385,7 +385,7 @@ export const STACKS_ITEMS: Array<StackType> = [
     },
     {
         name: "Flask & Fast Api",
-        experience: "2 months",
+        experience: "4 years",
         logo: FlaskFastLogo,
         description: {
             ru: `Опыт в создании REST приложений, есть опыт в запуске нескольких воркеров используя uvicorn, сотни часов деббага для хорошей асинхронной работы используя asyncio.
@@ -425,7 +425,7 @@ export const STACKS_ITEMS: Array<StackType> = [
     },
     {
         name: "ElasticSearch",
-        experience: "1 year",
+        experience: "2 year",
         logo: ElasticsearchLogo,
         description: {
             ru: `В рамках одного из проектов была задача разработать платформу для оркестрирования приложения.
@@ -459,7 +459,7 @@ export const STACKS_ITEMS: Array<StackType> = [
     },
     {
         name: "UI/UX",
-        experience: `4 yers`,
+        experience: `5 years`,
         logo: DesignLogo,
         description: {
             ru: `В своей практике я часто работал над проектами, где в команде не было дизайнера, что и привело меня к глубокому изучению пользовательского опыта. Я часто создавал дизайн и находил решения в процессе фронтенд-разработки. Для меня всегда было важно, как именно пользователь взаимодействует с интерфейсом: я стремлюсь максимально упростить процесс, минимизировать количество шагов и добавлять пояснения в местах, где существует вероятность запутаться. Для более сложных задач я освоил Figma, даже создавал плагины для автоматизации рутинных процессов, что выходило за рамки стандартной работы дизайнеров.
