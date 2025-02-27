@@ -78,12 +78,8 @@ export const STACKS_ITEMS: Array<StackType> = [
         experience: "4 years",
         logo: GoLangLogo,
         description: {
-            ru: `Изначально все ради проекта gomusic.to — поиск музыки, генрация изображений. В последствии, сделал на Go поисковую систему, NER и кучу другого
-      микросервисного бекенда, обожаю этот язык.
-      Контекст, горутины, каналы и гексогональная архитектура.`,
-            en: `Initially all for the project gomusic.to - music search, image genration. Later, I made Go search engine, NER and a lot of other microservice backend.
-      microservice backend, I love that language.
-      `
+            ru: `Поиск и распознавание музыки , генрация изображений. В последствии, сделал на Go поисковую систему, NER, оркестраторы. Интеграции с Kafka/RabbitMQ/Redis/MongoDB/Postgres.`,
+            en: `Music search and recognition, image generation. Later, I created a search engine in Go, NER, orchestrators. Integrations with Kafka/RabbitMQ/Redis/MongoDB/Postgres.`
         },
         tags: [STACK_TAGS.BackEnd]
     },
