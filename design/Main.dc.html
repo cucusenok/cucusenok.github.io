@@ -1,0 +1,398 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&amp;family=IBM+Plex+Sans:wght@400;500&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap">
+  <style>
+    body { margin: 0; background: #0b0d12; }
+    a { color: #e7e9ee; text-decoration: none; } a:hover { color: var(--accent); }
+    .site { font-family: 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif; color: #e7e9ee; background: #0b0d12; -webkit-font-smoothing: antialiased; }
+    .display { font-family: 'Space Grotesk', 'Helvetica Neue', Arial, sans-serif; letter-spacing: -0.02em; }
+    .mono { font-family: 'JetBrains Mono', 'SF Mono', Menlo, monospace; }
+    .wrap { width: 1120px; margin: 0 auto; }
+    .muted { color: #8a93a6; }
+    .faint { color: #5b6376; }
+    .card { background: #11141b; border: 1px solid rgba(255,255,255,0.08); border-radius: 14px; }
+    .card:hover { border-color: rgba(255,255,255,0.16); }
+    .chip { font-family: 'JetBrains Mono', Menlo, monospace; font-size: 11px; line-height: 20px; padding: 0 8px; border-radius: 6px; color: #8a93a6; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.07); white-space: nowrap; }
+    .btn { display: inline-flex; align-items: center; gap: 8px; height: 44px; padding: 0 18px; border-radius: 10px; font-size: 14px; font-weight: 500; border: 1px solid rgba(255,255,255,0.12); background: rgba(255,255,255,0.03); color: #e7e9ee; }
+    .btn:hover { border-color: rgba(255,255,255,0.24); color: #e7e9ee; }
+    .btn-primary { background: var(--accent); color: #0b0d12; border-color: var(--accent); }
+    .btn-primary:hover { filter: brightness(1.06); color: #0b0d12; }
+    .icon-btn { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.12); color: #8a93a6; background: rgba(255,255,255,0.03); }
+    .icon-btn:hover { color: #e7e9ee; border-color: rgba(255,255,255,0.24); }
+    .section-index { font-family: 'JetBrains Mono', Menlo, monospace; font-size: 12px; color: var(--accent); letter-spacing: 0.04em; }
+    .h2 { font-family: 'Space Grotesk', sans-serif; font-size: 34px; line-height: 40px; font-weight: 700; letter-spacing: -0.02em; margin: 0; }
+    .rule { height: 1px; background: rgba(255,255,255,0.08); }
+    .leader { flex: 1 1 auto; border-bottom: 1px dotted rgba(255,255,255,0.18); margin: 0 10px 5px; }
+    .bullet { display: flex; gap: 12px; font-size: 15px; line-height: 24px; color: #b7bdcb; }
+    .bullet::before { content: ""; flex: none; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); margin-top: 9px; opacity: 0.9; }
+    .nav-link { font-size: 14px; color: #8a93a6; } .nav-link:hover { color: #e7e9ee; }
+    .grid-noise { background-image: linear-gradient(rgba(255,255,255,0.035) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.035) 1px, transparent 1px); background-size: 48px 48px; mask-image: radial-gradient(ellipse 70% 60% at 50% 0%, #000 30%, transparent 100%); -webkit-mask-image: radial-gradient(ellipse 70% 60% at 50% 0%, #000 30%, transparent 100%); }
+  </style>
+</helmet>
+
+<div class="site" style="--accent: {{accent}}; --accent-soft: {{accentSoft}}; width: 1440px; min-height: 3400px; position: relative; overflow: hidden;">
+
+  <!-- background atmosphere -->
+  <div class="grid-noise" style="position: absolute; inset: 0 0 auto 0; height: 900px; pointer-events: none;"></div>
+  <div style="position: absolute; top: -260px; left: 50%; transform: translateX(-50%); width: 900px; height: 520px; border-radius: 50%; background: radial-gradient(closest-side, var(--accent-soft), transparent); opacity: 0.9; pointer-events: none;"></div>
+
+  <!-- nav -->
+  <header style="position: relative; height: 72px; border-bottom: 1px solid rgba(255,255,255,0.06); backdrop-filter: blur(8px);">
+    <div class="wrap" style="height: 72px; display: flex; align-items: center; justify-content: space-between;">
+      <a href="#" class="mono" style="display: flex; align-items: center; gap: 10px; font-size: 14px; color: #e7e9ee;">
+        <span style="display: inline-flex; width: 28px; height: 28px; border-radius: 8px; background: var(--accent); color: #0b0d12; align-items: center; justify-content: center; font-weight: 700; font-size: 12px;">OT</span>
+        <span>cucusenok<span class="faint">.github.io</span></span>
+      </a>
+      <nav style="display: flex; align-items: center; gap: 32px;">
+        <a class="nav-link" href="#experience">Experience</a>
+        <a class="nav-link" href="#projects">Projects</a>
+        <a class="nav-link" href="#stack">Stack</a>
+        <a class="nav-link" href="#writing">Writing</a>
+      </nav>
+      <a class="btn" href="#" style="height: 40px; padding: 0 14px; font-size: 13px;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+        CV · PDF
+      </a>
+    </div>
+  </header>
+
+  <!-- hero -->
+  <section style="position: relative;">
+    <div class="wrap" style="display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 32px; padding: 120px 0 96px; align-items: center;">
+      <div style="grid-column: span 7; display: flex; flex-direction: column; gap: 28px;">
+        <div class="mono" style="display: flex; align-items: center; gap: 10px; font-size: 13px; color: var(--accent);">
+          <span style="width: 8px; height: 8px; border-radius: 50%; background: #34d399; box-shadow: 0 0 0 4px rgba(52,211,153,0.18);"></span>
+          Backend Team Lead @ Banank · building nextdocs.ai
+        </div>
+        <h1 class="display" style="margin: 0; font-size: 72px; line-height: 72px; font-weight: 700; color: #f3f4f7;">Oleksandr<br>Teroshkin</h1>
+        <p style="margin: 0; max-width: 560px; font-size: 20px; line-height: 32px; color: #b7bdcb;">Senior software engineer and team lead. I design event-driven backends, real-time collaboration and AI-native products — and lead the teams that ship them.</p>
+        <div style="display: flex; align-items: center; gap: 12px; padding-top: 8px;">
+          <a class="btn btn-primary" href="#">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+            Download CV
+          </a>
+          <a class="btn" href="#projects">See projects</a>
+          <div style="width: 1px; height: 28px; background: rgba(255,255,255,0.1); margin: 0 6px;"></div>
+          <a class="icon-btn" href="#" title="GitHub"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a>
+          <a class="icon-btn" href="#" title="LinkedIn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
+          <a class="icon-btn" href="#" title="Telegram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg></a>
+          <a class="icon-btn" href="#" title="Email"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg></a>
+        </div>
+      </div>
+
+      <div style="grid-column: span 5; display: flex; justify-content: flex-end;">
+        <div class="card" style="width: 380px; padding: 20px; display: flex; flex-direction: column; gap: 18px; background: linear-gradient(180deg, #13171f, #0f1218);">
+          <div style="display: flex; align-items: center; gap: 16px;">
+            <img src="profile.jpg" alt="Oleksandr Teroshkin" style="width: 72px; height: 72px; border-radius: 16px; object-fit: cover; border: 1px solid rgba(255,255,255,0.12);">
+            <div style="display: flex; flex-direction: column; gap: 4px;">
+              <div class="display" style="font-size: 18px; font-weight: 700;">@cucusenok</div>
+              <div class="mono muted" style="font-size: 12px;">Kyiv · UTC+2 · open to remote</div>
+            </div>
+          </div>
+          <div class="rule"></div>
+          <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px;">
+            <div style="display: flex; flex-direction: column; gap: 2px;">
+              <div class="display" style="font-size: 26px; font-weight: 700; color: #f3f4f7;">9<span style="color: var(--accent);">+</span></div>
+              <div class="mono faint" style="font-size: 11px;">years in industry</div>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 2px;">
+              <div class="display" style="font-size: 26px; font-weight: 700; color: #f3f4f7;">100M<span style="color: var(--accent);">+</span></div>
+              <div class="mono faint" style="font-size: 11px;">users served</div>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 2px;">
+              <div class="display" style="font-size: 26px; font-weight: 700; color: #f3f4f7;">40<span style="color: var(--accent);">+</span></div>
+              <div class="mono faint" style="font-size: 11px;">engineers led</div>
+            </div>
+          </div>
+          <div class="rule"></div>
+          <div style="display: flex; flex-wrap: wrap; gap: 6px;">
+            <span class="chip">Go</span><span class="chip">Python</span><span class="chip">TypeScript</span><span class="chip">NATS</span><span class="chip">Kubernetes</span><span class="chip">LLM · RAG</span><span class="chip">MCP</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- experience -->
+  <section id="experience" style="position: relative;">
+    <div class="wrap" style="padding: 64px 0 80px; display: flex; flex-direction: column; gap: 40px;">
+      <div style="display: flex; align-items: baseline; justify-content: space-between;">
+        <div style="display: flex; flex-direction: column; gap: 10px;">
+          <div class="section-index">01 / EXPERIENCE</div>
+          <h2 class="h2">Nine years, five teams, one habit: ship measurable outcomes.</h2>
+        </div>
+        <a class="mono nav-link" href="#" style="font-size: 12px;">full CV →</a>
+      </div>
+
+      <div style="display: flex; flex-direction: column;">
+        <div style="display: grid; grid-template-columns: 300px minmax(0, 1fr); gap: 40px; padding: 28px 0; border-top: 1px solid rgba(255,255,255,0.08);">
+          <div style="display: flex; flex-direction: column; gap: 6px;">
+            <div class="display" style="font-size: 22px; font-weight: 700;">Banank</div>
+            <div class="mono muted" style="font-size: 12px;">Nov 2024 — Present</div>
+            <div class="mono" style="font-size: 12px; color: var(--accent);">current</div>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 12px;">
+            <div style="font-size: 16px; font-weight: 500; color: #f3f4f7;">Backend Development Team Lead</div>
+            <div class="bullet">Designed the core banking platform with finance and accounting; ledger on Apache Fineract with a double-entry model</div>
+            <div class="bullet">Architected systems from scratch: microservices, event-driven infrastructure on NATS, data lake, Server-Driven UI</div>
+            <div class="bullet">Built AI agents automating technical, accounting and legal workflows — ~$300K in annual cost savings</div>
+            <div style="display: flex; gap: 6px; padding-top: 4px;"><span class="chip">Go</span><span class="chip">Java</span><span class="chip">NATS</span><span class="chip">YugabyteDB</span><span class="chip">WSO2</span><span class="chip">Fineract</span></div>
+          </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 300px minmax(0, 1fr); gap: 40px; padding: 28px 0; border-top: 1px solid rgba(255,255,255,0.08);">
+          <div style="display: flex; flex-direction: column; gap: 6px;">
+            <div class="display" style="font-size: 22px; font-weight: 700;">Samsung</div>
+            <div class="mono muted" style="font-size: 12px;">Aug 2023 — Nov 2024</div>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 12px;">
+            <div style="font-size: 16px; font-weight: 500; color: #f3f4f7;">Head of Research and Development Team</div>
+            <div class="bullet">Reduced HelpDesk workload by 23% with LLM, RAG, topic classification and agent recommendation</div>
+            <div class="bullet">Search and recommendation system with 11–50 ms response time over 20M+ records</div>
+            <div class="bullet">SERP satisfaction from 30% to 73% with custom ranking algorithms</div>
+            <div style="display: flex; gap: 6px; padding-top: 4px;"><span class="chip">Python</span><span class="chip">LLM · RAG</span><span class="chip">ElasticSearch</span><span class="chip">PyTorch</span></div>
+          </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 300px minmax(0, 1fr); gap: 40px; padding: 28px 0; border-top: 1px solid rgba(255,255,255,0.08);">
+          <div style="display: flex; flex-direction: column; gap: 6px;">
+            <div class="display" style="font-size: 22px; font-weight: 700;">Nokia</div>
+            <div class="mono muted" style="font-size: 12px;">May 2021 — Jun 2023</div>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 12px;">
+            <div style="font-size: 16px; font-weight: 500; color: #f3f4f7;">Senior Software Engineer</div>
+            <div class="bullet">Architecture supporting 100M+ users and 64,000+ users per node; system design with major cellular operators, 40+ engineers</div>
+            <div class="bullet">GROK pattern generation with Transformers and a UI — logging quality +70%</div>
+            <div style="display: flex; gap: 6px; padding-top: 4px;"><span class="chip">Go</span><span class="chip">React</span><span class="chip">5G · O-RAN</span><span class="chip">Transformers</span></div>
+          </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 300px minmax(0, 1fr); gap: 40px; padding: 28px 0; border-top: 1px solid rgba(255,255,255,0.08);">
+          <div style="display: flex; flex-direction: column; gap: 6px;">
+            <div class="display" style="font-size: 22px; font-weight: 700;">Locka</div>
+            <div class="mono muted" style="font-size: 12px;">Jun 2020 — May 2021 · Sweden</div>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 12px;">
+            <div style="font-size: 16px; font-weight: 500; color: #f3f4f7;">Team Lead</div>
+            <div class="bullet">Real-time streaming up to 4K for apartment previews</div>
+            <div class="bullet">Authorization service load −87% (350 → 45 RPS)</div>
+          </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 300px minmax(0, 1fr); gap: 40px; padding: 28px 0; border-top: 1px solid rgba(255,255,255,0.08); border-bottom: 1px solid rgba(255,255,255,0.08);">
+          <div style="display: flex; flex-direction: column; gap: 6px;">
+            <div class="display" style="font-size: 22px; font-weight: 700;">Kia</div>
+            <div class="mono muted" style="font-size: 12px;">Jun 2017 — Jun 2020</div>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 12px;">
+            <div style="font-size: 16px; font-weight: 500; color: #f3f4f7;">Junior → Middle → Senior → Team Lead</div>
+            <div class="bullet">Semantic search over 340,000+ documents; latency −90% (400 ms → 30–50 ms) at 1,000 RPS</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- projects -->
+  <section id="projects" style="position: relative;">
+    <div class="wrap" style="padding: 40px 0 80px; display: flex; flex-direction: column; gap: 40px;">
+      <div style="display: flex; align-items: baseline; justify-content: space-between;">
+        <div style="display: flex; flex-direction: column; gap: 10px;">
+          <div class="section-index">02 / PROJECTS</div>
+          <h2 class="h2">Selected work</h2>
+        </div>
+        <a class="mono nav-link" href="#" style="font-size: 12px;">all 11 projects →</a>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px;">
+        <!-- featured -->
+        <a href="#" class="card" style="grid-column: span 2; padding: 0; overflow: hidden; display: flex; flex-direction: column; color: inherit;">
+          <div style="position: relative; height: 300px; overflow: hidden; background: #0d1016;">
+            <img src="nextdocs-1.jpg" alt="nextdocs.ai" style="width: 100%; height: 100%; object-fit: cover; object-position: top; display: block; opacity: 0.92;">
+            <div style="position: absolute; inset: 0; background: linear-gradient(180deg, transparent 50%, #11141b 100%);"></div>
+            <span class="mono" style="position: absolute; top: 16px; left: 16px; font-size: 11px; padding: 4px 8px; border-radius: 6px; background: var(--accent); color: #0b0d12; font-weight: 500;">FOUNDER · 2024 — NOW</span>
+          </div>
+          <div style="padding: 20px 24px 24px; display: flex; flex-direction: column; gap: 10px;">
+            <div style="display: flex; align-items: center; justify-content: space-between;">
+              <div style="display: flex; align-items: center; gap: 12px;">
+                <img src="logo-nextdocs.png" alt="" style="height: 20px; width: auto;">
+                <span class="display" style="font-size: 22px; font-weight: 700;">nextdocs.ai</span>
+              </div>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#8a93a6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+            </div>
+            <p style="margin: 0; font-size: 15px; line-height: 24px; color: #b7bdcb;">AI-native documentation platform: 14 services, Yjs collaborative editor over NATS, two-way GitHub sync, RAG and an MCP server for Claude connectors.</p>
+            <div style="display: flex; flex-wrap: wrap; gap: 6px; padding-top: 4px;"><span class="chip">Go</span><span class="chip">TypeScript</span><span class="chip">Python</span><span class="chip">NATS JetStream</span><span class="chip">Weaviate</span><span class="chip">Helm</span></div>
+          </div>
+        </a>
+
+        <a href="#" class="card" style="padding: 24px; display: flex; flex-direction: column; gap: 14px; color: inherit;">
+          <div style="display: flex; align-items: center; justify-content: space-between;">
+            <span style="display: inline-flex; width: 44px; height: 44px; border-radius: 10px; background: #e9ecf2; align-items: center; justify-content: center;"><img src="logo-search.svg" alt="" style="width: 26px; height: 26px; object-fit: contain;"></span>
+            <span class="mono faint" style="font-size: 11px;">SAMSUNG</span>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 6px;">
+            <div class="display" style="font-size: 20px; font-weight: 700;">Search Engine</div>
+            <p style="margin: 0; font-size: 14px; line-height: 22px; color: #b7bdcb;">Search and recommendation over 20M+ heterogeneous records, 11–50 ms.</p>
+          </div>
+          <div style="display: flex; flex-wrap: wrap; gap: 6px; margin-top: auto;"><span class="chip">Python</span><span class="chip">ElasticSearch</span><span class="chip">ML</span></div>
+        </a>
+
+        <a href="#" class="card" style="padding: 24px; display: flex; flex-direction: column; gap: 14px; color: inherit;">
+          <div style="display: flex; align-items: center; justify-content: space-between;">
+            <span style="display: inline-flex; width: 44px; height: 44px; border-radius: 10px; background: #e9ecf2; align-items: center; justify-content: center;"><img src="logo-5g.svg" alt="" style="width: 26px; height: 26px; object-fit: contain;"></span>
+            <span class="mono faint" style="font-size: 11px;">NOKIA</span>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 6px;">
+            <div class="display" style="font-size: 20px; font-weight: 700;">5G · O-RAN</div>
+            <p style="margin: 0; font-size: 14px; line-height: 22px; color: #b7bdcb;">Monitoring and configuration of 3GPP/LTE/5G devices in O-RAN architecture.</p>
+          </div>
+          <div style="display: flex; flex-wrap: wrap; gap: 6px; margin-top: auto;"><span class="chip">Go</span><span class="chip">React</span><span class="chip">Kubernetes</span></div>
+        </a>
+
+        <a href="#" class="card" style="padding: 24px; display: flex; flex-direction: column; gap: 14px; color: inherit;">
+          <div style="display: flex; align-items: center; justify-content: space-between;">
+            <span style="display: inline-flex; width: 44px; height: 44px; border-radius: 10px; background: #e9ecf2; align-items: center; justify-content: center;"><img src="logo-go_music.svg" alt="" style="width: 26px; height: 26px; object-fit: contain;"></span>
+            <span class="mono faint" style="font-size: 11px;">SIDE PROJECT</span>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 6px;">
+            <div class="display" style="font-size: 20px; font-weight: 700;">Go Music</div>
+            <p style="margin: 0; font-size: 14px; line-height: 22px; color: #b7bdcb;">Music sharing and recognition for iOS, Android and Web, built from scratch.</p>
+          </div>
+          <div style="display: flex; flex-wrap: wrap; gap: 6px; margin-top: auto;"><span class="chip">Flutter</span><span class="chip">Go</span><span class="chip">AWS</span></div>
+        </a>
+
+        <a href="#" class="card" style="padding: 24px; display: flex; flex-direction: column; gap: 14px; color: inherit;">
+          <div style="display: flex; align-items: center; justify-content: space-between;">
+            <span style="display: inline-flex; width: 44px; height: 44px; border-radius: 10px; background: #e9ecf2; align-items: center; justify-content: center;"><img src="logo-sightline.png" alt="" style="width: 26px; height: 26px; object-fit: contain;"></span>
+            <span class="mono faint" style="font-size: 11px;">LOCKA</span>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 6px;">
+            <div class="display" style="font-size: 20px; font-weight: 700;">Neo4Web</div>
+            <p style="margin: 0; font-size: 14px; line-height: 22px; color: #b7bdcb;">Streaming service for apartment previews, up to 4K.</p>
+          </div>
+          <div style="display: flex; flex-wrap: wrap; gap: 6px; margin-top: auto;"><span class="chip">WebRTC</span><span class="chip">Node.js</span><span class="chip">React</span></div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- stack -->
+  <section id="stack" style="position: relative;">
+    <div class="wrap" style="padding: 40px 0 80px; display: flex; flex-direction: column; gap: 40px;">
+      <div style="display: flex; flex-direction: column; gap: 10px;">
+        <div class="section-index">03 / STACK</div>
+        <h2 class="h2">Tools, with years of daily use</h2>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 40px;">
+        <div style="display: flex; flex-direction: column; gap: 14px;">
+          <div class="mono muted" style="font-size: 12px; letter-spacing: 0.06em;">LANGUAGES</div>
+          <div class="rule"></div>
+          <div style="display: flex; align-items: baseline; font-size: 15px;"><span>Python</span><span class="leader"></span><span class="mono muted" style="font-size: 12px;">8 yrs</span></div>
+          <div style="display: flex; align-items: baseline; font-size: 15px;"><span>SQL</span><span class="leader"></span><span class="mono muted" style="font-size: 12px;">8 yrs</span></div>
+          <div style="display: flex; align-items: baseline; font-size: 15px;"><span>JavaScript / TypeScript</span><span class="leader"></span><span class="mono muted" style="font-size: 12px;">7 yrs</span></div>
+          <div style="display: flex; align-items: baseline; font-size: 15px;"><span>Go</span><span class="leader"></span><span class="mono muted" style="font-size: 12px;">4 yrs</span></div>
+          <div style="display: flex; align-items: baseline; font-size: 15px;"><span>Java</span><span class="leader"></span><span class="mono muted" style="font-size: 12px;">2 yrs</span></div>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 14px;">
+          <div class="mono muted" style="font-size: 12px; letter-spacing: 0.06em;">BACKEND &amp; INFRA</div>
+          <div class="rule"></div>
+          <div style="display: flex; align-items: baseline; font-size: 15px;"><span>Testing</span><span class="leader"></span><span class="mono muted" style="font-size: 12px;">8 yrs</span></div>
+          <div style="display: flex; align-items: baseline; font-size: 15px;"><span>Docker · Kubernetes</span><span class="leader"></span><span class="mono muted" style="font-size: 12px;">5 yrs</span></div>
+          <div style="display: flex; align-items: baseline; font-size: 15px;"><span>FastAPI · Flask</span><span class="leader"></span><span class="mono muted" style="font-size: 12px;">4 yrs</span></div>
+          <div style="display: flex; align-items: baseline; font-size: 15px;"><span>NATS · Kafka</span><span class="leader"></span><span class="mono muted" style="font-size: 12px;">3 yrs</span></div>
+          <div style="display: flex; align-items: baseline; font-size: 15px;"><span>ElasticSearch</span><span class="leader"></span><span class="mono muted" style="font-size: 12px;">2 yrs</span></div>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 14px;">
+          <div class="mono muted" style="font-size: 12px; letter-spacing: 0.06em;">ML &amp; AI</div>
+          <div class="rule"></div>
+          <div style="display: flex; align-items: baseline; font-size: 15px;"><span>NLP · classical ML</span><span class="leader"></span><span class="mono muted" style="font-size: 12px;">4 yrs</span></div>
+          <div style="display: flex; align-items: baseline; font-size: 15px;"><span>LLM · RAG · agents</span><span class="leader"></span><span class="mono muted" style="font-size: 12px;">3 yrs</span></div>
+          <div style="display: flex; align-items: baseline; font-size: 15px;"><span>PyTorch · TensorFlow</span><span class="leader"></span><span class="mono muted" style="font-size: 12px;">3 yrs</span></div>
+          <div style="display: flex; align-items: baseline; font-size: 15px;"><span>Weaviate · vector search</span><span class="leader"></span><span class="mono muted" style="font-size: 12px;">2 yrs</span></div>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 14px;">
+          <div class="mono muted" style="font-size: 12px; letter-spacing: 0.06em;">FRONTEND &amp; MOBILE</div>
+          <div class="rule"></div>
+          <div style="display: flex; align-items: baseline; font-size: 15px;"><span>React</span><span class="leader"></span><span class="mono muted" style="font-size: 12px;">5 yrs</span></div>
+          <div style="display: flex; align-items: baseline; font-size: 15px;"><span>ffmpeg · streaming</span><span class="leader"></span><span class="mono muted" style="font-size: 12px;">3 yrs</span></div>
+          <div style="display: flex; align-items: baseline; font-size: 15px;"><span>Vue</span><span class="leader"></span><span class="mono muted" style="font-size: 12px;">1 yr</span></div>
+          <div style="display: flex; align-items: baseline; font-size: 15px;"><span>Flutter · Dart</span><span class="leader"></span><span class="mono muted" style="font-size: 12px;">6 mo</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- writing -->
+  <section id="writing" style="position: relative;">
+    <div class="wrap" style="padding: 40px 0 80px; display: flex; flex-direction: column; gap: 40px;">
+      <div style="display: flex; align-items: baseline; justify-content: space-between;">
+        <div style="display: flex; flex-direction: column; gap: 10px;">
+          <div class="section-index">04 / WRITING</div>
+          <h2 class="h2">Notes on Medium</h2>
+        </div>
+        <a class="mono nav-link" href="#" style="font-size: 12px;">medium.com/@cucusenok →</a>
+      </div>
+      <div style="display: flex; flex-direction: column;">
+        <a href="#" style="display: grid; grid-template-columns: 140px minmax(0, 1fr) 24px; gap: 24px; align-items: center; padding: 22px 0; border-top: 1px solid rgba(255,255,255,0.08); color: inherit;">
+          <span class="mono muted" style="font-size: 12px;">[DATE]</span>
+          <span style="display: flex; flex-direction: column; gap: 4px;">
+            <span class="display" style="font-size: 20px; font-weight: 500;">[Article title from Medium]</span>
+            <span class="muted" style="font-size: 14px;">[One-line subtitle]</span>
+          </span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#8a93a6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+        </a>
+        <a href="#" style="display: grid; grid-template-columns: 140px minmax(0, 1fr) 24px; gap: 24px; align-items: center; padding: 22px 0; border-top: 1px solid rgba(255,255,255,0.08); color: inherit;">
+          <span class="mono muted" style="font-size: 12px;">[DATE]</span>
+          <span style="display: flex; flex-direction: column; gap: 4px;">
+            <span class="display" style="font-size: 20px; font-weight: 500;">[Article title from Medium]</span>
+            <span class="muted" style="font-size: 14px;">[One-line subtitle]</span>
+          </span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#8a93a6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+        </a>
+        <a href="#" style="display: grid; grid-template-columns: 140px minmax(0, 1fr) 24px; gap: 24px; align-items: center; padding: 22px 0; border-top: 1px solid rgba(255,255,255,0.08); border-bottom: 1px solid rgba(255,255,255,0.08); color: inherit;">
+          <span class="mono muted" style="font-size: 12px;">[DATE]</span>
+          <span style="display: flex; flex-direction: column; gap: 4px;">
+            <span class="display" style="font-size: 20px; font-weight: 500;">[Article title from Medium]</span>
+            <span class="muted" style="font-size: 14px;">[One-line subtitle]</span>
+          </span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#8a93a6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- footer -->
+  <footer style="position: relative; border-top: 1px solid rgba(255,255,255,0.08);">
+    <div class="wrap" style="padding: 48px 0 56px; display: flex; align-items: flex-end; justify-content: space-between;">
+      <div style="display: flex; flex-direction: column; gap: 14px;">
+        <div class="display" style="font-size: 28px; font-weight: 700;">Let's talk.</div>
+        <a href="#" class="mono" style="font-size: 15px; color: var(--accent);">tereshkin2364@gmail.com</a>
+        <div style="display: flex; gap: 20px;">
+          <a class="nav-link" href="#">GitHub</a><a class="nav-link" href="#">LinkedIn</a><a class="nav-link" href="#">Telegram</a><a class="nav-link" href="#">Medium</a>
+        </div>
+      </div>
+      <div class="mono faint" style="font-size: 12px; text-align: right; line-height: 20px;">© 2026 Oleksandr Teroshkin<br>React · Vite · deployed on GitHub Pages</div>
+    </div>
+  </footer>
+</div>
+</x-dc>
+<script data-dc-script data-props='{"accent":{"editor":"color","default":"#f0b24a","options":["#f0b24a","#5ad1c8","#a78bfa","#7bd88f"],"section":"Theme"},"$preview":{"width":1440,"height":3400}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const accent = this.props.accent ?? '#f0b24a';
+    const hex = accent.replace('#', '');
+    const n = parseInt(hex.length === 3 ? hex.split('').map((c) => c + c).join('') : hex, 16);
+    const r = (n >> 16) & 255, g = (n >> 8) & 255, b = n & 255;
+    return { accent, accentSoft: `rgba(${r}, ${g}, ${b}, 0.16)` };
+  }
+}
+</script>
+</body>
+</html>

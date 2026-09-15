@@ -1,0 +1,121 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&amp;family=IBM+Plex+Sans:wght@400;500&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap">
+  <style>
+    body { margin: 0; background: #0b0d12; }
+    a { color: #e7e9ee; text-decoration: none; } a:hover { color: var(--accent); }
+    .site { font-family: 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif; color: #e7e9ee; background: #0b0d12; -webkit-font-smoothing: antialiased; }
+    .display { font-family: 'Space Grotesk', 'Helvetica Neue', Arial, sans-serif; letter-spacing: -0.02em; }
+    .mono { font-family: 'JetBrains Mono', 'SF Mono', Menlo, monospace; }
+    .wrap { width: 1120px; margin: 0 auto; }
+    .muted { color: #8a93a6; } .faint { color: #5b6376; }
+    .card { background: #11141b; border: 1px solid rgba(255,255,255,0.08); border-radius: 14px; }
+    .chip { font-family: 'JetBrains Mono', Menlo, monospace; font-size: 11px; line-height: 20px; padding: 0 8px; border-radius: 6px; color: #8a93a6; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.07); white-space: nowrap; }
+    .btn { display: inline-flex; align-items: center; gap: 8px; height: 44px; padding: 0 18px; border-radius: 10px; font-size: 14px; font-weight: 500; border: 1px solid rgba(255,255,255,0.12); background: rgba(255,255,255,0.03); color: #e7e9ee; }
+    .btn-primary { background: var(--accent); color: #0b0d12; border-color: var(--accent); }
+    .nav-link { font-size: 14px; color: #8a93a6; } .nav-link:hover { color: #e7e9ee; }
+    .kv { display: flex; flex-direction: column; gap: 6px; }
+    .kv .k { font-family: 'JetBrains Mono', Menlo, monospace; font-size: 11px; letter-spacing: 0.06em; color: #5b6376; }
+    .kv .v { font-size: 15px; color: #e7e9ee; }
+    .prose p { margin: 0; font-size: 17px; line-height: 28px; color: #b7bdcb; }
+    .prose h3 { margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 20px; font-weight: 700; color: #f3f4f7; }
+    .thumb { border-radius: 10px; border: 1px solid rgba(255,255,255,0.08); overflow: hidden; background: #0d1016; }
+    .thumb.active { border-color: var(--accent); }
+  </style>
+</helmet>
+
+<div class="site" style="--accent: {{accent}}; width: 1440px; min-height: 1560px; position: relative; overflow: hidden;">
+  <header style="height: 72px; border-bottom: 1px solid rgba(255,255,255,0.06);">
+    <div class="wrap" style="height: 72px; display: flex; align-items: center; justify-content: space-between;">
+      <a href="#" class="mono" style="display: flex; align-items: center; gap: 10px; font-size: 14px;">
+        <span style="display: inline-flex; width: 28px; height: 28px; border-radius: 8px; background: var(--accent); color: #0b0d12; align-items: center; justify-content: center; font-weight: 700; font-size: 12px;">OT</span>
+        <span>cucusenok<span class="faint">.github.io</span></span>
+      </a>
+      <nav style="display: flex; align-items: center; gap: 32px;">
+        <a class="nav-link" href="#">Experience</a><a class="nav-link" href="#" style="color: #e7e9ee;">Projects</a><a class="nav-link" href="#">Stack</a><a class="nav-link" href="#">Writing</a>
+      </nav>
+      <a class="btn" href="#" style="height: 40px; padding: 0 14px; font-size: 13px;">CV · PDF</a>
+    </div>
+  </header>
+
+  <div class="wrap" style="padding: 40px 0 80px; display: flex; flex-direction: column; gap: 40px;">
+    <a href="#" class="mono nav-link" style="display: inline-flex; align-items: center; gap: 8px; font-size: 12px;">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+      all projects
+    </a>
+
+    <div style="display: grid; grid-template-columns: minmax(0, 1fr) 340px; gap: 48px; align-items: start;">
+      <div style="display: flex; flex-direction: column; gap: 20px;">
+        <div style="display: flex; align-items: center; gap: 14px;">
+          <img src="logo-nextdocs.png" alt="" style="height: 26px; width: auto;">
+          <span class="mono" style="font-size: 12px; padding: 3px 8px; border-radius: 6px; background: var(--accent); color: #0b0d12; font-weight: 500;">FOUNDER</span>
+        </div>
+        <h1 class="display" style="margin: 0; font-size: 56px; line-height: 60px; font-weight: 700; color: #f3f4f7;">nextdocs.ai — documentation that writes itself from your code</h1>
+        <p style="margin: 0; font-size: 20px; line-height: 32px; color: #b7bdcb; max-width: 680px;">An AI-native knowledge platform: collaborative editor, two-way GitHub sync, RAG over docs and code, and an MCP server so Claude and other agents can read and write the docs.</p>
+        <div style="display: flex; gap: 12px; padding-top: 4px;">
+          <a class="btn btn-primary" href="#">Visit nextdocs.ai
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+          </a>
+          <a class="btn" href="#">GitHub org</a>
+        </div>
+      </div>
+
+      <div class="card" style="padding: 24px; display: flex; flex-direction: column; gap: 18px;">
+        <div class="kv"><span class="k">ROLE</span><span class="v">Founder, sole architect</span></div>
+        <div class="kv"><span class="k">YEARS</span><span class="v">2024 — present</span></div>
+        <div class="kv"><span class="k">SCALE</span><span class="v">14 services · 3 languages · Helm chart</span></div>
+        <div class="kv"><span class="k">STACK</span>
+          <span style="display: flex; flex-wrap: wrap; gap: 6px; padding-top: 2px;"><span class="chip">Go</span><span class="chip">TypeScript</span><span class="chip">Python</span><span class="chip">NATS JetStream</span><span class="chip">Postgres</span><span class="chip">Weaviate</span><span class="chip">Yjs</span><span class="chip">LangGraph</span><span class="chip">MCP</span><span class="chip">Kubernetes</span></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- gallery -->
+    <div style="display: flex; flex-direction: column; gap: 14px;">
+      <div class="thumb active" style="height: 600px; position: relative;">
+        <img src="nextdocs-1.jpg" alt="nextdocs.ai onboarding" style="width: 100%; height: 100%; object-fit: cover; object-position: top; display: block;">
+        <div class="mono" style="position: absolute; left: 16px; bottom: 16px; font-size: 12px; padding: 6px 10px; border-radius: 8px; background: rgba(11,13,18,0.7); color: #e7e9ee; border: 1px solid rgba(255,255,255,0.1);">1 / 2 — three clicks from GitHub auth to generated docs</div>
+      </div>
+      <div style="display: flex; gap: 14px;">
+        <div class="thumb active" style="width: 172px; height: 100px; flex: none;"><img src="nextdocs-1.jpg" alt="" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div>
+        <div class="thumb" style="width: 172px; height: 100px; flex: none;"><img src="nextdocs-2.jpg" alt="" style="width: 100%; height: 100%; object-fit: cover; display: block; opacity: 0.7;"></div>
+      </div>
+    </div>
+
+    <!-- description -->
+    <div style="display: grid; grid-template-columns: 300px minmax(0, 1fr); gap: 40px; padding-top: 16px;">
+      <div class="mono muted" style="font-size: 12px; letter-spacing: 0.06em; padding-top: 6px;">WHAT IT IS</div>
+      <div class="prose" style="display: flex; flex-direction: column; gap: 28px; max-width: 720px;">
+        <div style="display: flex; flex-direction: column; gap: 10px;">
+          <h3>Platform</h3>
+          <p>Fourteen services, each in its own repository: a Go core API, chat and comments; TypeScript auth, CRDT collab backend and markdown↔Yjs converter; Python agent, RAG, documentation generator and MCP server. NATS JetStream is the event bus; Postgres, Weaviate and Redis hold state; a Helm chart deploys the whole set on any domain.</p>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 10px;">
+          <h3>Editor and sync</h3>
+          <p>Real-time collaborative editing on Yjs CRDT transported over NATS, with bidirectional GitHub sync through a GitHub App: import, pull on webhook, export, page history.</p>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 10px;">
+          <h3>Agents</h3>
+          <p>A LangGraph agent with intent routing and per-user LLM quota metering answers over a RAG index built from tree-sitter chunks and BGE-M3 embeddings. An MCP server with 36 tools, secured by OAuth 2.1, exposes the same capabilities to Claude connectors.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</x-dc>
+<script data-dc-script data-props='{"accent":{"editor":"color","default":"#f0b24a","options":["#f0b24a","#5ad1c8","#a78bfa","#7bd88f"],"section":"Theme"},"$preview":{"width":1440,"height":1560}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return { accent: this.props.accent ?? '#f0b24a' };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+{
+  "artboards": [
+    {
+      "file": "Main.dc.html",
+      "x": 0,
+      "y": 0,
+      "w": 1440,
+      "h": 3400,
+      "title": "Home — desktop"
+    },
+    {
+      "file": "HeroAlt.dc.html",
+      "x": 1560,
+      "y": 0,
+      "w": 1440,
+      "h": 760,
+      "title": "Hero — option B (typographic)"
+    },
+    {
+      "file": "Project.dc.html",
+      "x": 1560,
+      "y": 900,
+      "w": 1440,
+      "h": 1560,
+      "title": "Project page — nextdocs.ai"
+    },
+    {
+      "file": "Mobile.dc.html",
+      "x": 3120,
+      "y": 0,
+      "w": 390,
+      "h": 2540,
+      "title": "Home — mobile"
+    }
+  ],
+  "annotations": [
+    {
+      "id": "brief",
+      "x": 0,
+      "y": -340,
+      "w": 520,
+      "text": "cucusenok.github.io redesign — dark developer portfolio.\nType: Space Grotesk (display) + IBM Plex Sans (body) + JetBrains Mono (labels). One accent color, switchable via the Theme tweak above each artboard.\nSections: Experience (from resume.json), Projects (11 existing, 5 shown), Stack with years, Writing (Medium — titles are placeholders)."
+    },
+    {
+      "id": "hero-choice",
+      "x": 1560,
+      "y": -220,
+      "w": 420,
+      "text": "Hero: option A (in Home) keeps the photo and a profile card; option B is typographic — huge name, facts in a key/value column, photo only as a 28px avatar in the nav."
+    }
+  ],
+  "launch": {
+    "view": "canvas"
+  }
+}

@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&amp;family=IBM+Plex+Sans:wght@400;500&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap">
+  <style>
+    body { margin: 0; background: #0b0d12; }
+    a { color: #e7e9ee; text-decoration: none; } a:hover { color: var(--accent); }
+    .site { font-family: 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif; color: #e7e9ee; background: #0b0d12; -webkit-font-smoothing: antialiased; }
+    .display { font-family: 'Space Grotesk', 'Helvetica Neue', Arial, sans-serif; letter-spacing: -0.03em; }
+    .mono { font-family: 'JetBrains Mono', 'SF Mono', Menlo, monospace; }
+    .wrap { width: 1120px; margin: 0 auto; }
+    .muted { color: #8a93a6; } .faint { color: #5b6376; }
+    .btn { display: inline-flex; align-items: center; gap: 8px; height: 44px; padding: 0 18px; border-radius: 10px; font-size: 14px; font-weight: 500; border: 1px solid rgba(255,255,255,0.12); background: rgba(255,255,255,0.03); color: #e7e9ee; }
+    .btn-primary { background: var(--accent); color: #0b0d12; border-color: var(--accent); }
+    .nav-link { font-size: 14px; color: #8a93a6; } .nav-link:hover { color: #e7e9ee; }
+    .kv { display: grid; grid-template-columns: 120px minmax(0, 1fr); gap: 16px; font-size: 14px; line-height: 22px; }
+    .kv .k { color: #5b6376; }
+  </style>
+</helmet>
+
+<div class="site" style="--accent: {{accent}}; --accent-soft: {{accentSoft}}; width: 1440px; height: 760px; position: relative; overflow: hidden;">
+  <div style="position: absolute; right: -200px; top: 120px; width: 720px; height: 720px; border-radius: 50%; background: radial-gradient(closest-side, var(--accent-soft), transparent); pointer-events: none;"></div>
+
+  <header style="position: relative; height: 72px; border-bottom: 1px solid rgba(255,255,255,0.06);">
+    <div class="wrap" style="height: 72px; display: flex; align-items: center; justify-content: space-between;">
+      <a href="#" style="display: flex; align-items: center; gap: 10px;">
+        <img src="profile.jpg" alt="" style="width: 28px; height: 28px; border-radius: 50%; object-fit: cover; border: 1px solid rgba(255,255,255,0.15);">
+        <span class="mono" style="font-size: 14px;">cucusenok</span>
+      </a>
+      <nav style="display: flex; align-items: center; gap: 32px;">
+        <a class="nav-link" href="#">Experience</a><a class="nav-link" href="#">Projects</a><a class="nav-link" href="#">Stack</a><a class="nav-link" href="#">Writing</a>
+      </nav>
+      <a class="btn btn-primary" href="#" style="height: 40px; padding: 0 14px; font-size: 13px;">Download CV</a>
+    </div>
+  </header>
+
+  <section style="position: relative;">
+    <div class="wrap" style="padding: 96px 0 0; display: flex; flex-direction: column; gap: 40px;">
+      <div class="mono" style="font-size: 13px; color: var(--accent);">// senior software engineer · team lead · ml</div>
+      <h1 class="display" style="margin: 0; font-size: 128px; line-height: 112px; font-weight: 700; color: #f3f4f7;">Oleksandr<br>Teroshkin<span style="color: var(--accent);">.</span></h1>
+      <div style="display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 32px; align-items: start; padding-top: 8px;">
+        <p style="grid-column: span 6; margin: 0; font-size: 20px; line-height: 32px; color: #b7bdcb;">I design event-driven backends, real-time collaboration and AI-native products, and lead the teams that ship them. Currently Backend Team Lead at Banank and building nextdocs.ai.</p>
+        <div style="grid-column: 8 / span 5; display: flex; flex-direction: column; gap: 10px; border-left: 1px solid rgba(255,255,255,0.1); padding-left: 24px;">
+          <div class="kv"><span class="k mono">now</span><span>Backend Team Lead @ Banank</span></div>
+          <div class="kv"><span class="k mono">building</span><span>nextdocs.ai — AI-native docs platform</span></div>
+          <div class="kv"><span class="k mono">stack</span><span>Go · Python · TypeScript · NATS · k8s</span></div>
+          <div class="kv"><span class="k mono">reach</span><a href="#" style="color: var(--accent);">tereshkin2364@gmail.com</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+</x-dc>
+<script data-dc-script data-props='{"accent":{"editor":"color","default":"#f0b24a","options":["#f0b24a","#5ad1c8","#a78bfa","#7bd88f"],"section":"Theme"},"$preview":{"width":1440,"height":760}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const accent = this.props.accent ?? '#f0b24a';
+    const hex = accent.replace('#', '');
+    const n = parseInt(hex.length === 3 ? hex.split('').map((c) => c + c).join('') : hex, 16);
+    const r = (n >> 16) & 255, g = (n >> 8) & 255, b = n & 255;
+    return { accent, accentSoft: `rgba(${r}, ${g}, ${b}, 0.16)` };
+  }
+}
+</script>
+</body>
+</html>

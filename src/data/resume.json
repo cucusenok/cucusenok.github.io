@@ -1,0 +1,300 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
+  "basics": {
+    "name": "Oleksandr Teroshkin",
+    "label": "Senior Software Engineer | Team Lead | ML Engineer",
+    "email": "tereshkin2364@gmail.com",
+    "phone": "+380954901724",
+    "url": "https://cucusenok.github.io",
+    "summary": "Software engineer and team lead specializing in scalable system design, machine learning, real-time data, and AI-native products (LLM agents, RAG, MCP). Led cross-functional teams, cut latency, and delivered user-centric systems for enterprises with up to 100M+ users.",
+    "location": {
+      "countryCode": "UA"
+    },
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "cucusenok",
+        "url": "https://www.linkedin.com/in/cucusenok/"
+      },
+      {
+        "network": "Telegram",
+        "username": "cucusenok",
+        "url": "https://t.me/cucusenok"
+      },
+      {
+        "network": "Medium",
+        "username": "cucusenok",
+        "url": "https://medium.com/@cucusenok"
+      },
+      {
+        "network": "Website",
+        "username": "",
+        "url": "https://cucusenok.github.io"
+      },
+      {
+        "network": "GitHub",
+        "username": "cucusenok",
+        "url": "https://github.com/cucusenok"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "Banank",
+      "position": "Backend Development Team Lead",
+      "startDate": "2024-11",
+      "highlights": [
+        "Took the bank from zero to MVP in [N] months: core banking platform, ledger on Apache Fineract with a double-entry model",
+        "Hired and led a backend team of [N] engineers; set up ADR-based architecture, code review and release process",
+        "Cut time-to-market for features from [X] to [Y] weeks via CI/CD, contract-first APIs and WSO2 automation",
+        "Architected systems from scratch: microservices, event-driven infrastructure (NATS), data lake, Server-Driven UI",
+        "Built AI agents automating technical, accounting, and legal workflows, delivering ~$300K in annual cost savings",
+        "Security: FIDO2/WebAuthn, multi-channel OTP, KYC/AML (AMLD-compliant), Tazama real-time transaction monitoring"
+      ]
+    },
+    {
+      "name": "Samsung",
+      "position": "Head of Research and Development Team",
+      "location": "Eastern Europe",
+      "startDate": "2023-08",
+      "endDate": "2024-11",
+      "highlights": [
+        "Reduced HelpDesk team workload by 23% by implementing LLM, RAG, topic classification, and agent recommendation",
+        "Created a search/recommendation system with 11-50ms response time for 20M+ records: entities, names, products",
+        "Boosted SERP satisfaction metrics from 30% to 73% by developing and deploying custom algorithms for user needs",
+        "Analyzed 200M+ user requests to refine system boundaries and improve performance through behavior analysis",
+        "Built a robust testing framework, scaling from zero to 7,600 unit, integration, and performance tests"
+      ]
+    },
+    {
+      "name": "Nokia",
+      "position": "Senior Software Engineer",
+      "location": "Eastern Europe",
+      "startDate": "2021-05",
+      "endDate": "2023-06",
+      "highlights": [
+        "Designed and developed architecture supporting over 100 million users and 64,000+ users per node",
+        "Created an adaptive interface for new base station configurations, eliminating manual modifications",
+        "Developed GROK pattern generation using Transformers with a user-friendly UI, enhancing logging quality by 70%",
+        "Led system design initiatives with major cellular operators, coordinating a team of 40+ engineers"
+      ]
+    },
+    {
+      "name": "Locka",
+      "position": "Team Lead",
+      "location": "Sweden",
+      "startDate": "2020-06",
+      "endDate": "2021-05",
+      "highlights": [
+        "Engineered real-time streaming capabilities supporting resolutions up to 4K, enhancing user experience",
+        "Optimized the authorization service, reducing load by 87% (from 350 to 45 RPS) to improve system stability",
+        "Boosted up to 700% user engagement by developing an innovative apartment selection system"
+      ]
+    },
+    {
+      "name": "Kia",
+      "position": "Junior → Middle → Senior → Team Lead",
+      "location": "Eastern Europe",
+      "startDate": "2017-06",
+      "endDate": "2020-06",
+      "highlights": [
+        "Designed and deployed semantic search over a corpus of 340,000+ documents, improving retrieval accuracy",
+        "Optimized search infrastructure to cut latency by 90%, from 400ms to 30-50ms, while scaling to 1,000 RPS",
+        "Classical ML analysis (Linear/Logistic Regression, Random Forest), cutting processing time from 1 hour to 1 minute"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "nextdocs.ai",
+      "url": "https://nextdocs.ai",
+      "highlights": [
+        "Founded and built a 14-service AI documentation platform: Go, TypeScript, Python; NATS JetStream, Postgres, Weaviate, Helm",
+        "Real-time collaborative editor on Yjs CRDT over NATS with two-way GitHub sync; RBAC via NATS auth-callout + JWT",
+        "MCP server (36 tools) with OAuth 2.1 for Claude connectors; RAG (tree-sitter → BGE-M3 → Weaviate) and LangGraph agent",
+        "Rolled out the platform at a client company: self-hosted deployment, team onboarding, roadmap driven by user feedback"
+      ]
+    },
+    {
+      "name": "web.gomusic.com",
+      "description": "Cross-platform music sharing and recognition app for iOS, Android, and Web: AWS, Python, Flutter, Go, Node.js"
+    }
+  ],
+  "skills": [
+    {
+      "name": "Programming Languages",
+      "keywords": [
+        "Go",
+        "Java",
+        "Python",
+        "TypeScript",
+        "SQL"
+      ]
+    },
+    {
+      "name": "Machine Learning",
+      "keywords": [
+        "NLP",
+        "LLM",
+        "RAG",
+        "LangGraph",
+        "BERT",
+        "CNN",
+        "RNN",
+        "PyTorch",
+        "TensorFlow",
+        "Scikit-learn",
+        "OpenCV",
+        "Spark"
+      ]
+    },
+    {
+      "name": "Software",
+      "keywords": [
+        "Jira",
+        "YouTrack",
+        "Confluence",
+        "WSO2",
+        "Slack",
+        "Bruno/Postman",
+        "GitHub",
+        "GitLab",
+        "Figma",
+        "Notion",
+        "Mermaid",
+        "Claude Code"
+      ]
+    },
+    {
+      "name": "Backend",
+      "keywords": [
+        "API",
+        "REST",
+        "GraphQL",
+        "WebSocket",
+        "WebRTC",
+        "JWT",
+        "OAuth 2.1",
+        "WebAuthn",
+        "MCP",
+        "CRDT",
+        "Quarkus"
+      ]
+    },
+    {
+      "name": "FrontEnd",
+      "keywords": [
+        "React",
+        "Redux",
+        "Zustand",
+        "MobX",
+        "Flutter",
+        "BLoC"
+      ]
+    },
+    {
+      "name": "DevOps",
+      "keywords": [
+        "Git",
+        "CI/CD",
+        "GitHub Actions",
+        "MLOps",
+        "Docker",
+        "Kubernetes",
+        "Helm",
+        "AWS",
+        "GKE",
+        "GCP",
+        "nginx",
+        "Sentry",
+        "Grafana",
+        "k6 load testing",
+        "Testcontainers"
+      ]
+    },
+    {
+      "name": "Storages & Transport",
+      "keywords": [
+        "NATS",
+        "Kafka",
+        "ClickHouse",
+        "Postgres",
+        "YugabyteDB",
+        "MongoDB",
+        "ElasticSearch",
+        "RabbitMQ",
+        "InfluxDB",
+        "neo4j",
+        "Redis",
+        "Snowflake",
+        "BigQuery",
+        "Weaviate"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "KNU",
+      "area": "Computer Science",
+      "studyType": "MSc",
+      "startDate": "2020",
+      "endDate": "2022"
+    },
+    {
+      "institution": "KNU",
+      "area": "Computer Science",
+      "studyType": "BSc with Honours",
+      "startDate": "2016",
+      "endDate": "2020"
+    }
+  ],
+  "languages": [
+    {
+      "language": "English",
+      "fluency": "C1"
+    },
+    {
+      "language": "Ukrainian",
+      "fluency": "Native"
+    },
+    {
+      "language": "Russian",
+      "fluency": "Native/Bilingual"
+    },
+    {
+      "language": "Estonian",
+      "fluency": "Basic"
+    }
+  ],
+  "certificates": [
+    {
+      "name": "Artificial Intelligence",
+      "issuer": "NASU",
+      "date": "2019"
+    },
+    {
+      "name": "Routing and Switching",
+      "issuer": "Cisco",
+      "date": "2020"
+    },
+    {
+      "name": "Networks",
+      "issuer": "Cisco",
+      "date": "2020"
+    },
+    {
+      "name": "Programming in Python",
+      "issuer": "Cisco",
+      "date": "2020"
+    },
+    {
+      "name": "Cybersecurity",
+      "issuer": "Cisco",
+      "date": "2020"
+    }
+  ],
+  "meta": {
+    "version": "v1.0.0",
+    "lastModified": "2026-09-15"
+  }
+}
