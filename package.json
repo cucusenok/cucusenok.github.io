@@ -9,8 +9,7 @@
     "build": "tsc -b && vite build && cp dist/index.html dist/404.html",
     "preview": "vite preview",
     "sync:resume": "node scripts/sync-resume.mjs",
-    "predeploy": "pnpm build",
-    "deploy": "gh-pages -d dist --dotfiles"
+    "pages": "pnpm build && gh-pages -d dist --dotfiles"
   },
   "dependencies": {
     "react": "^18.3.1",

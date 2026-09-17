@@ -44,9 +44,9 @@
       "position": "Backend Development Team Lead",
       "startDate": "2024-11",
       "highlights": [
-        "Took the bank from zero to MVP in [N] months: core banking platform, ledger on Apache Fineract with a double-entry model",
-        "Hired and led a backend team of [N] engineers; set up ADR-based architecture, code review and release process",
-        "Cut time-to-market for features from [X] to [Y] weeks via CI/CD, contract-first APIs and WSO2 automation",
+        "Took the bank from zero to MVP: core banking platform, ledger on Apache Fineract with a double-entry model",
+        "Hired and led the backend team; set up ADR-based architecture reviews, code review and release process",
+        "Cut time-to-market for new features with CI/CD, contract-first APIs and WSO2 publishing automation",
         "Architected systems from scratch: microservices, event-driven infrastructure (NATS), data lake, Server-Driven UI",
         "Built AI agents automating technical, accounting, and legal workflows, delivering ~$300K in annual cost savings",
         "Security: FIDO2/WebAuthn, multi-channel OTP, KYC/AML (AMLD-compliant), Tazama real-time transaction monitoring"
@@ -145,7 +145,8 @@
         "TensorFlow",
         "Scikit-learn",
         "OpenCV",
-        "Spark"
+        "Spark",
+        "A/B testing"
       ]
     },
     {
@@ -195,9 +196,11 @@
     {
       "name": "DevOps",
       "keywords": [
-        "Git",
         "CI/CD",
         "GitHub Actions",
+        "Terraform",
+        "Pulumi",
+        "Ansible",
         "MLOps",
         "Docker",
         "Kubernetes",

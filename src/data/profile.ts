@@ -12,7 +12,7 @@ export const profile = {
   status: 'Backend Team Lead @ Banank · building nextdocs.ai',
   intro:
     'Senior software engineer and team lead. I design event-driven backends, real-time collaboration and AI-native products — and lead the teams that ship them.',
-  location: 'Kyiv · UTC+2 · open to remote',
+  location: 'Open to remote',
   facts: [
     { value: '9', suffix: '+', label: 'years in industry' },
     { value: '100M', suffix: '+', label: 'users served' },

@@ -6,7 +6,7 @@ Personal site: CV, projects, stack and writing. Vite + React + TypeScript, deplo
 pnpm install
 pnpm dev            # http://localhost:4500
 pnpm build          # dist/ (+ 404.html for SPA routing on Pages)
-pnpm deploy         # build and push dist/ to the gh-pages branch
+pnpm pages          # build and push dist/ to the gh-pages branch
 ```
 
 ## Content
